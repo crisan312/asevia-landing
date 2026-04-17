@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASEVIA · Tu agente de IA para impuestos y negocios en Ecuador</title>
+  <meta name="description" content="Tecnologia inteligente para ti y tu negocio. Automatiza declaraciones SRI, gestiona tu ERP y gobierna tus datos con inteligencia artificial." />
+  <link rel="icon" href="logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --border: #1e1e2e;
+      --text: #e4e4ef;
+      --text-muted: #8888a0;
+      --accent: #6c5ce7;
+      --accent-light: #a29bfe;
+      --green: #00d2a0;
+      --blue: #60A5FA;
+      --violet: #A78BFA;
+      --orange: #f5a623;
+      --pink: #fd79a8;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Nav */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10, 10, 15, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 0.75rem; text-decoration: none;
+    }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-logo-text {
+      font-size: 1.4rem; font-weight: 900; letter-spacing: 2px;
+      background: linear-gradient(135deg, var(--blue), var(--violet));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+    .nav-links a {
+      color: var(--text-muted); text-decoration: none; font-size: 0.875rem;
+      font-weight: 500; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--blue), var(--violet)) !important;
+      color: white !important; padding: 0.5rem 1.25rem; border-radius: 8px;
+      font-weight: 600 !important; transition: opacity 0.2s !important;
+    }
+    .nav-cta:hover { opacity: 0.9; }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 6rem 2rem 4rem;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(96,165,250,0.12), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(167,139,250,0.08), transparent);
+    }
+    .hero-logo {
+      width: 120px; height: auto; margin-bottom: 1.5rem;
+      filter: drop-shadow(0 0 30px rgba(96,165,250,0.3));
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(96,165,250,0.1); border: 1px solid rgba(96,165,250,0.2);
+      border-radius: 100px; padding: 0.4rem 1.25rem; font-size: 0.8rem;
+      color: var(--blue); margin-bottom: 2rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900;
+      line-height: 1.1; letter-spacing: -0.03em; max-width: 800px;
+    }
+    .hero h1 .gradient {
+      background: linear-gradient(135deg, var(--blue), var(--violet));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero .slogan {
+      margin-top: 1.5rem; font-size: 1.3rem; font-weight: 600;
+      background: linear-gradient(135deg, var(--blue), var(--green));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      margin-top: 1rem; font-size: 1.05rem; color: var(--text-muted);
+      max-width: 620px; line-height: 1.7;
+    }
+    .hero-cta {
+      display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; justify-content: center;
+    }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: linear-gradient(135deg, var(--blue), var(--violet));
+      color: white; padding: 0.85rem 2rem; border-radius: 12px;
+      font-weight: 700; font-size: 1rem; text-decoration: none;
+      transition: all 0.3s; border: none; cursor: pointer;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(96,165,250,0.3); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: transparent; color: var(--text);
+      padding: 0.85rem 2rem; border-radius: 12px;
+      font-weight: 600; font-size: 1rem; text-decoration: none;
+      border: 1px solid var(--border); transition: all 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--blue); color: var(--blue); }
+
+    /* Pain points */
+    .pain {
+      max-width: 1000px; margin: 0 auto; padding: 4rem 2rem;
+      text-align: center;
+    }
+    .pain h2 { font-size: 2rem; font-weight: 800; margin-bottom: 1rem; }
+    .pain .subtitle { color: var(--text-muted); margin-bottom: 3rem; }
+    .pain-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem; text-align: left;
+    }
+    .pain-item {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.5rem;
+    }
+    .pain-item .icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .pain-item .before { color: #ef4444; font-size: 0.85rem; font-weight: 600; }
+    .pain-item .after { color: var(--green); font-size: 0.85rem; font-weight: 600; margin-top: 0.5rem; }
+    .pain-item p { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem; }
+
+    /* Products */
+    .products {
+      max-width: 1200px; margin: 0 auto; padding: 6rem 2rem;
+    }
+    .section-header {
+      text-align: center; margin-bottom: 4rem;
+    }
+    .section-header h2 {
+      font-size: 2.25rem; font-weight: 800; letter-spacing: -0.02em;
+    }
+    .section-header p {
+      color: var(--text-muted); margin-top: 0.75rem; font-size: 1rem;
+    }
+    .products-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .product-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 2rem; transition: all 0.3s;
+      position: relative; overflow: hidden; text-decoration: none; color: inherit;
+      display: flex; flex-direction: column;
+    }
+    .product-card:hover {
+      border-color: rgba(96,165,250,0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(96,165,250,0.1);
+    }
+    .product-card.live:hover { border-color: rgba(0,210,160,0.5); }
+    .product-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; margin-bottom: 1.25rem;
+    }
+    .product-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .product-card .desc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; flex: 1; }
+    .product-status {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.75rem; font-weight: 600; margin-top: 1.25rem;
+      padding: 0.3rem 0.75rem; border-radius: 100px; width: fit-content;
+    }
+    .status-live { background: rgba(0,210,160,0.12); color: var(--green); }
+    .status-soon { background: rgba(245,166,35,0.12); color: var(--orange); }
+    .product-card .arrow {
+      position: absolute; top: 1.5rem; right: 1.5rem;
+      color: var(--text-muted); font-size: 1.25rem; transition: all 0.3s;
+    }
+    .product-card:hover .arrow { color: var(--blue); transform: translate(4px, -4px); }
+
+    /* About */
+    .about {
+      max-width: 800px; margin: 0 auto; padding: 4rem 2rem 6rem;
+      text-align: center;
+    }
+    .about h2 { font-size: 2rem; font-weight: 800; margin-bottom: 1.5rem; }
+    .about p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
+    .about .name {
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--blue), var(--violet));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+    .footer-logo { height: 40px; margin-bottom: 1rem; opacity: 0.6; }
+    footer p { color: var(--text-muted); font-size: 0.8rem; }
+    footer a { color: var(--blue); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-top: 0.75rem; }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .products-grid { grid-template-columns: 1fr; }
+      .hero-cta { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="logo.svg" alt="ASEVIA" />
+        <span class="nav-logo-text">ASEVIA</span>
+      </a>
+      <div class="nav-links">
+        <a href="#soluciones">Soluciones</a>
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="https://declaraai.asevia.app" class="nav-cta">Iniciar sesion</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <img src="logo.svg" alt="ASEVIA Robot IA" class="hero-logo" />
+    <div class="hero-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      AI &middot; Systems &middot; Advisory
+    </div>
+    <h1>
+      Tu agente de <span class="gradient">inteligencia artificial</span>
+      para negocios
+    </h1>
+    <div class="slogan">Tecnologia inteligente para ti y tu negocio</div>
+    <p>
+      Olvida las noches calculando impuestos. ASEVIA automatiza tus declaraciones
+      al SRI, gestiona tu contabilidad y te avisa antes de que venzan tus
+      obligaciones. Como tener un contador que nunca duerme.
+    </p>
+    <div class="hero-cta">
+      <a href="https://declaraai.asevia.app" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        Probar DeclaraAI gratis
+      </a>
+      <a href="#productos" class="btn-secondary">
+        Ver todos los productos
+      </a>
+    </div>
+  </section>
+
+  <!-- Pain points -->
+  <section class="pain" id="soluciones">
+    <h2>El problema que resolvemos</h2>
+    <p class="subtitle">Declarar impuestos en Ecuador no deberia quitarte el sueno</p>
+    <div class="pain-grid">
+      <div class="pain-item">
+        <div class="icon">&#128337;</div>
+        <div class="before">Antes: 3 dias por declaracion</div>
+        <p>Recopilar facturas, clasificar, calcular, llenar formularios, subir al SRI...</p>
+        <div class="after">Con ASEVIA: 15 minutos</div>
+        <p>La IA clasifica, calcula y genera el XML listo para enviar.</p>
+      </div>
+      <div class="pain-item">
+        <div class="icon">&#128176;</div>
+        <div class="before">Antes: Multas por olvido</div>
+        <p>Se te paso la fecha del F104, del ATS, del RDEP... multa del SRI.</p>
+        <div class="after">Con ASEVIA: Alertas automaticas</div>
+        <p>Te notificamos 7 dias antes de cada vencimiento.</p>
+      </div>
+      <div class="pain-item">
+        <div class="icon">&#129302;</div>
+        <div class="before">Antes: Depender del contador</div>
+        <p>Esperar a que revise, corrija, te llame, le pagues...</p>
+        <div class="after">Con ASEVIA: Tu propio agente IA</div>
+        <p>Asistente 24/7 que entiende la normativa SRI Ecuador.</p>
+      </div>
+      <div class="pain-item">
+        <div class="icon">&#128196;</div>
+        <div class="before">Antes: Facturacion manual</div>
+        <p>Entrar al portal SRI, llenar campos, firmar, descargar RIDE...</p>
+        <div class="after">Con ASEVIA: 1 click</div>
+        <p>Factura, NC, ND, retencion, guia, liquidacion. Firmada y enviada.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="products" id="productos">
+    <div class="section-header">
+      <h2>Nuestros Productos</h2>
+      <p>Soluciones especializadas para cada area de tu empresa</p>
+    </div>
+    <div class="products-grid">
+
+      <!-- DeclaraAI -->
+      <a href="https://declaraai.asevia.app" class="product-card live" target="_blank">
+        <div class="product-icon" style="background: linear-gradient(135deg, #6c5ce7, #a29bfe);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3>DeclaraAI</h3>
+        <p class="desc">
+          Plataforma tributaria con inteligencia artificial. Automatiza F104, F103, F101,
+          ATS, RDEP, facturacion electronica y los 47 formularios del SRI Ecuador.
+          Cobertura 99.5% del SRI.
+        </p>
+        <div class="product-status status-live">
+          <svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="currentColor"/></svg>
+          En vivo &mdash; Probar gratis
+        </div>
+        <span class="arrow">&nearr;</span>
+      </a>
+
+      <!-- ERP Ecuador -->
+      <div class="product-card">
+        <div class="product-icon" style="background: linear-gradient(135deg, #00b894, #00d2a0);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <h3>ERP Ecuador</h3>
+        <p class="desc">
+          Sistema de planificacion empresarial para PyMEs ecuatorianas. Contabilidad,
+          inventarios, produccion, nomina y reportes financieros integrados con IA.
+        </p>
+        <div class="product-status status-soon">
+          <svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="currentColor"/></svg>
+          Proximamente
+        </div>
+      </div>
+
+      <!-- Data Governance -->
+      <div class="product-card">
+        <div class="product-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <h3>Data Governance</h3>
+        <p class="desc">
+          Gobierno de datos empresarial. Catalogo de metadatos, calidad de datos,
+          perfilamiento, cumplimiento LOPDP Ecuador y trazabilidad de informacion critica.
+        </p>
+        <div class="product-status status-soon">
+          <svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="currentColor"/></svg>
+          Proximamente
+        </div>
+      </div>
+
+      <!-- Flujos Compras -->
+      <div class="product-card">
+        <div class="product-icon" style="background: linear-gradient(135deg, #fd79a8, #e84393);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        </div>
+        <h3>Flujo de Compras AI</h3>
+        <p class="desc">
+          Gestion de compras y aprobaciones con integracion SAP B1. Solicitudes,
+          cotizaciones, ordenes de compra y seguimiento de proveedores automatizado.
+        </p>
+        <div class="product-status status-soon">
+          <svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="currentColor"/></svg>
+          Proximamente
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about" id="nosotros">
+    <h2>Sobre ASEVIA</h2>
+    <p>
+      ASEVIA nace de una frustracion real: declarar impuestos en Ecuador
+      no deberia ser un proceso de 3 dias lleno de errores y multas.
+      Creamos herramientas con inteligencia artificial que entienden
+      la normativa ecuatoriana (SRI, IESS, Supercias, MDT) y automatizan
+      lo que antes requeria horas de trabajo manual.
+    </p>
+    <p>
+      Creada por un <span class="name">grupo de ingenieros IA ecuatorianos</span>,
+      especializados en transformacion digital, inteligencia artificial
+      y automatizacion de procesos empresariales.
+    </p>
+    <p style="margin-top: 2rem;">
+      <a href="mailto:info@asevia.app" class="btn-secondary" style="display: inline-flex;">
+        Contactar
+      </a>
+    </p>
+  </section>
+
+  <footer>
+    <img src="logo.svg" alt="ASEVIA" class="footer-logo" />
+    <p>&copy; 2026 ASEVIA. Todos los derechos reservados.</p>
+    <p style="margin-top: 0.25rem; font-size: 0.75rem; color: #555;">
+      Manta, Ecuador &middot; AI &middot; Systems &middot; Advisory
+    </p>
+    <div class="footer-links">
+      <a href="mailto:info@asevia.app">info@asevia.app</a>
+      <a href="https://declaraai.asevia.app">DeclaraAI</a>
+    </div>
+  </footer>
+
+</body>
+</html>

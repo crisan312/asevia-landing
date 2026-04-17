@@ -1,0 +1,301 @@
+<svg width="680" height="860" viewBox="0 0 680 860" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Logo Aservia con robot mascota</title>
+<desc>Logo ASERVIA completo con robot futurista parado al lado derecho como mascota de la marca, en degradado azul-violeta.</desc>
+
+<defs>
+  <linearGradient id="gAV" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#60A5FA"/>
+    <stop offset="100%" stop-color="#A78BFA"/>
+  </linearGradient>
+  <linearGradient id="gAVdk" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#2563EB"/>
+    <stop offset="100%" stop-color="#6D28D9"/>
+  </linearGradient>
+  <linearGradient id="gBg1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#0D1117"/>
+    <stop offset="100%" stop-color="#161B2E"/>
+  </linearGradient>
+  <linearGradient id="gBg2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#F0F4FF"/>
+    <stop offset="100%" stop-color="#EDE9FF"/>
+  </linearGradient>
+  <linearGradient id="gBody" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#1E3A5F"/>
+    <stop offset="100%" stop-color="#2D1B69"/>
+  </linearGradient>
+  <linearGradient id="gBodyLt" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#DBEAFE"/>
+    <stop offset="100%" stop-color="#EDE9FF"/>
+  </linearGradient>
+  <linearGradient id="gEyeL" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#93C5FD"/>
+    <stop offset="100%" stop-color="#60A5FA"/>
+  </linearGradient>
+  <linearGradient id="gEyeR" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#C4B5FD"/>
+    <stop offset="100%" stop-color="#A78BFA"/>
+  </linearGradient>
+  <linearGradient id="gIcon" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#60A5FA"/>
+    <stop offset="100%" stop-color="#A78BFA"/>
+  </linearGradient>
+  <linearGradient id="gIconDk" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#3B82F6"/>
+    <stop offset="100%" stop-color="#8B5CF6"/>
+  </linearGradient>
+</defs>
+
+<!-- ═══════════════════════════════════════════════
+     VERSIÓN 1 — FONDO OSCURO (principal)
+     ═══════════════════════════════════════════════ -->
+<rect x="30" y="16" width="624" height="240" rx="18" fill="url(#gBg1)"/>
+<text x="52" y="46" font-size="10" fill="#60A5FA" font-family="system-ui,sans-serif" font-weight="500" letter-spacing="2" opacity="0.55">VERSIÓN PRINCIPAL — FONDO OSCURO</text>
+
+<!-- Ícono nodo izquierda -->
+<circle cx="90" cy="148" r="20" fill="none" stroke="url(#gIcon)" stroke-width="1" opacity="0.22"/>
+<circle cx="90" cy="148" r="12" fill="url(#gIcon)" opacity="0.1"/>
+<circle cx="90" cy="148" r="6" fill="url(#gIcon)"/>
+<line x1="90" y1="148" x2="73" y2="133" stroke="url(#gIcon)" stroke-width="1" opacity="0.55"/>
+<circle cx="73" cy="133" r="3" fill="#60A5FA"/>
+<line x1="90" y1="148" x2="107" y2="133" stroke="url(#gIcon)" stroke-width="1" opacity="0.55"/>
+<circle cx="107" cy="133" r="3" fill="#A78BFA"/>
+<line x1="90" y1="148" x2="107" y2="163" stroke="url(#gIcon)" stroke-width="1" opacity="0.55"/>
+<circle cx="107" cy="163" r="3" fill="#A78BFA"/>
+<line x1="90" y1="148" x2="73" y2="163" stroke="url(#gIcon)" stroke-width="1" opacity="0.45"/>
+<circle cx="73" cy="163" r="2.5" fill="#60A5FA"/>
+<line x1="90" y1="148" x2="90" y2="122" stroke="url(#gIcon)" stroke-width="1" opacity="0.45"/>
+<circle cx="90" cy="122" r="2.5" fill="#60A5FA"/>
+
+<!-- WORDMARK ASERVIA -->
+<text x="128" y="178" font-size="66" font-family="system-ui,sans-serif" font-weight="800" fill="url(#gAV)" letter-spacing="3">ASERVIA</text>
+
+<!-- Robot mascota — fondo oscuro -->
+<!-- Antena -->
+<line x1="590" y1="72" x2="590" y2="58" stroke="#A78BFA" stroke-width="2" stroke-linecap="round"/>
+<circle cx="590" cy="54" r="5" fill="#A78BFA"/>
+<circle cx="590" cy="54" r="2.5" fill="#E9D5FF"/>
+<!-- Cabeza -->
+<rect x="568" y="74" width="44" height="36" rx="8" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1.5"/>
+<!-- Ojo izquierdo -->
+<rect x="575" y="83" width="12" height="9" rx="3" fill="url(#gEyeL)"/>
+<circle cx="579" cy="87" r="2.5" fill="#1E3A5F"/>
+<circle cx="578" cy="85" r="1" fill="#ffffff" opacity="0.9"/>
+<!-- Ojo derecho -->
+<rect x="593" y="83" width="12" height="9" rx="3" fill="url(#gEyeR)"/>
+<circle cx="597" cy="87" r="2.5" fill="#2D1B69"/>
+<circle cx="596" cy="85" r="1" fill="#ffffff" opacity="0.9"/>
+<!-- Boca -->
+<path d="M578 100 Q590 107 602 100" fill="none" stroke="url(#gAV)" stroke-width="1.8" stroke-linecap="round"/>
+<!-- Cuello -->
+<rect x="583" y="110" width="14" height="8" rx="2" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1"/>
+<!-- Torso -->
+<rect x="563" y="118" width="54" height="48" rx="9" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1.5"/>
+<!-- Panel IA -->
+<rect x="572" y="126" width="36" height="22" rx="4" fill="#0D1117" stroke="#3B82F6" stroke-width="0.8" opacity="0.8"/>
+<text x="590" y="141" font-size="11" font-family="system-ui,sans-serif" font-weight="800" fill="url(#gAV)" text-anchor="middle" letter-spacing="1">IA</text>
+<circle cx="575" cy="128" r="1.5" fill="#60A5FA" opacity="0.6"/>
+<circle cx="604" cy="128" r="1.5" fill="#A78BFA" opacity="0.6"/>
+<!-- Brazo izquierdo -->
+<rect x="545" y="120" width="16" height="34" rx="7" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1.2"/>
+<rect x="547" y="154" width="12" height="10" rx="4" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1"/>
+<!-- Brazo derecho levantado -->
+<rect x="619" y="104" width="16" height="34" rx="7" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1.2" transform="rotate(-30 627 121)"/>
+<rect x="626" y="92" width="12" height="10" rx="4" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1" transform="rotate(-30 632 97)"/>
+<!-- Cadera -->
+<rect x="569" y="166" width="42" height="12" rx="5" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1"/>
+<!-- Pierna izquierda -->
+<rect x="571" y="178" width="16" height="32" rx="6" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1.2"/>
+<rect x="568" y="208" width="20" height="9" rx="4" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1"/>
+<!-- Pierna derecha -->
+<rect x="593" y="178" width="16" height="32" rx="6" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1.2"/>
+<rect x="590" y="208" width="20" height="9" rx="4" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1"/>
+<!-- Destellos -->
+<circle cx="642" cy="80" r="2" fill="#A78BFA" opacity="0.5"/>
+<circle cx="648" cy="100" r="1.5" fill="#60A5FA" opacity="0.4"/>
+<circle cx="638" cy="130" r="1" fill="#A78BFA" opacity="0.4"/>
+
+<!-- Tagline -->
+<text x="129" y="203" font-size="10" font-family="system-ui,sans-serif" font-weight="400" fill="#94A3B8" letter-spacing="4.5">AI · SYSTEMS · ADVISORY</text>
+<line x1="129" y1="210" x2="555" y2="210" stroke="url(#gAV)" stroke-width="0.4" opacity="0.2"/>
+
+
+<!-- ═══════════════════════════════════════════════
+     VERSIÓN 2 — FONDO CLARO
+     ═══════════════════════════════════════════════ -->
+<rect x="30" y="278" width="624" height="240" rx="18" fill="url(#gBg2)"/>
+<text x="52" y="308" font-size="10" fill="#4338CA" font-family="system-ui,sans-serif" font-weight="500" letter-spacing="2" opacity="0.55">VERSIÓN SECUNDARIA — FONDO CLARO</text>
+
+<!-- Ícono nodo claro -->
+<circle cx="90" cy="410" r="20" fill="none" stroke="url(#gIconDk)" stroke-width="1" opacity="0.18"/>
+<circle cx="90" cy="410" r="12" fill="url(#gIconDk)" opacity="0.08"/>
+<circle cx="90" cy="410" r="6" fill="url(#gIconDk)"/>
+<line x1="90" y1="410" x2="73" y2="395" stroke="url(#gIconDk)" stroke-width="1" opacity="0.5"/>
+<circle cx="73" cy="395" r="3" fill="#3B82F6"/>
+<line x1="90" y1="410" x2="107" y2="395" stroke="url(#gIconDk)" stroke-width="1" opacity="0.5"/>
+<circle cx="107" cy="395" r="3" fill="#7C3AED"/>
+<line x1="90" y1="410" x2="107" y2="425" stroke="url(#gIconDk)" stroke-width="1" opacity="0.5"/>
+<circle cx="107" cy="425" r="3" fill="#7C3AED"/>
+<line x1="90" y1="410" x2="73" y2="425" stroke="url(#gIconDk)" stroke-width="1" opacity="0.4"/>
+<circle cx="73" cy="425" r="2.5" fill="#3B82F6"/>
+<line x1="90" y1="410" x2="90" y2="384" stroke="url(#gIconDk)" stroke-width="1" opacity="0.4"/>
+<circle cx="90" cy="384" r="2.5" fill="#3B82F6"/>
+
+<text x="128" y="440" font-size="66" font-family="system-ui,sans-serif" font-weight="800" fill="url(#gAVdk)" letter-spacing="3">ASERVIA</text>
+
+<!-- Robot claro -->
+<line x1="590" y1="334" x2="590" y2="320" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+<circle cx="590" cy="316" r="5" fill="#7C3AED"/>
+<circle cx="590" cy="316" r="2.5" fill="#EDE9FF"/>
+<rect x="568" y="336" width="44" height="36" rx="8" fill="url(#gBodyLt)" stroke="url(#gAVdk)" stroke-width="1.5"/>
+<rect x="575" y="345" width="12" height="9" rx="3" fill="#3B82F6"/>
+<circle cx="579" cy="349" r="2.5" fill="#DBEAFE"/>
+<circle cx="578" cy="347" r="1" fill="#ffffff" opacity="0.9"/>
+<rect x="593" y="345" width="12" height="9" rx="3" fill="#7C3AED"/>
+<circle cx="597" cy="349" r="2.5" fill="#EDE9FF"/>
+<circle cx="596" cy="347" r="1" fill="#ffffff" opacity="0.9"/>
+<path d="M578 362 Q590 369 602 362" fill="none" stroke="url(#gAVdk)" stroke-width="1.8" stroke-linecap="round"/>
+<rect x="583" y="372" width="14" height="8" rx="2" fill="url(#gBodyLt)" stroke="url(#gAVdk)" stroke-width="1"/>
+<rect x="563" y="380" width="54" height="48" rx="9" fill="url(#gBodyLt)" stroke="url(#gAVdk)" stroke-width="1.5"/>
+<rect x="572" y="388" width="36" height="22" rx="4" fill="#EDE9FF" stroke="#3B82F6" stroke-width="0.8" opacity="0.9"/>
+<text x="590" y="403" font-size="11" font-family="system-ui,sans-serif" font-weight="800" fill="url(#gAVdk)" text-anchor="middle" letter-spacing="1">IA</text>
+<circle cx="575" cy="390" r="1.5" fill="#3B82F6" opacity="0.5"/>
+<circle cx="604" cy="390" r="1.5" fill="#7C3AED" opacity="0.5"/>
+<rect x="545" y="382" width="16" height="34" rx="7" fill="url(#gBodyLt)" stroke="url(#gAVdk)" stroke-width="1.2"/>
+<rect x="547" y="416" width="12" height="10" rx="4" fill="url(#gBodyLt)" stroke="url(#gAVdk)" stroke-width="1"/>
+<rect x="619" y="366" width="16" height="34" rx="7" fill="url(#gBodyLt)" stroke="url(#gAVdk)" stroke-width="1.2" transform="rotate(-30 627 383)"/>
+<rect x="626" y="354" width="12" height="10" rx="4" fill="url(#gBodyLt)" stroke="url(#gAVdk)" stroke-width="1" transform="rotate(-30 632 359)"/>
+<rect x="569" y="428" width="42" height="12" rx="5" fill="url(#gBodyLt)" stroke="url(#gAVdk)" stroke-width="1"/>
+<rect x="571" y="440" width="16" height="32" rx="6" fill="url(#gBodyLt)" stroke="url(#gAVdk)" stroke-width="1.2"/>
+<rect x="568" y="470" width="20" height="9" rx="4" fill="url(#gBodyLt)" stroke="url(#gAVdk)" stroke-width="1"/>
+<rect x="593" y="440" width="16" height="32" rx="6" fill="url(#gBodyLt)" stroke="url(#gAVdk)" stroke-width="1.2"/>
+<rect x="590" y="470" width="20" height="9" rx="4" fill="url(#gBodyLt)" stroke="url(#gAVdk)" stroke-width="1"/>
+<text x="129" y="465" font-size="10" font-family="system-ui,sans-serif" font-weight="400" fill="#6B7280" letter-spacing="4.5">AI · SYSTEMS · ADVISORY</text>
+<line x1="129" y1="472" x2="555" y2="472" stroke="url(#gAVdk)" stroke-width="0.4" opacity="0.18"/>
+
+
+<!-- ═══════════════════════════════════════════════
+     VERSIÓN 3 — APP ICON
+     ═══════════════════════════════════════════════ -->
+<rect x="30" y="548" width="180" height="290" rx="32" fill="url(#gBg1)"/>
+<text x="46" y="574" font-size="10" fill="#60A5FA" font-family="system-ui,sans-serif" font-weight="500" letter-spacing="1.5" opacity="0.55">APP ICON</text>
+
+<!-- Robot grande centrado -->
+<line x1="120" y1="608" x2="120" y2="590" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="120" cy="586" r="6" fill="#A78BFA"/>
+<circle cx="120" cy="586" r="3" fill="#E9D5FF"/>
+<rect x="94" y="610" width="52" height="40" rx="10" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1.8"/>
+<rect x="101" y="620" width="14" height="10" rx="3.5" fill="url(#gEyeL)"/>
+<circle cx="106" cy="625" r="3" fill="#1E3A5F"/>
+<circle cx="104" cy="622" r="1.2" fill="#fff" opacity="0.9"/>
+<rect x="123" y="620" width="14" height="10" rx="3.5" fill="url(#gEyeR)"/>
+<circle cx="128" cy="625" r="3" fill="#2D1B69"/>
+<circle cx="126" cy="622" r="1.2" fill="#fff" opacity="0.9"/>
+<path d="M103 636 Q120 645 137 636" fill="none" stroke="url(#gAV)" stroke-width="2" stroke-linecap="round"/>
+<rect x="111" y="650" width="18" height="8" rx="3" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1.2"/>
+<rect x="88" y="658" width="64" height="52" rx="10" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1.8"/>
+<rect x="99" y="667" width="42" height="26" rx="5" fill="#0D1117" stroke="#3B82F6" stroke-width="1"/>
+<text x="120" y="684" font-size="13" font-family="system-ui,sans-serif" font-weight="800" fill="url(#gAV)" text-anchor="middle" letter-spacing="1">IA</text>
+<rect x="68" y="660" width="18" height="38" rx="8" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1.5"/>
+<rect x="70" y="698" width="14" height="10" rx="4" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1.2"/>
+<rect x="154" y="644" width="18" height="38" rx="8" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1.5" transform="rotate(-30 163 663)"/>
+<rect x="160" y="634" width="14" height="10" rx="4" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1.2" transform="rotate(-30 167 639)"/>
+<rect x="94" y="710" width="52" height="12" rx="5" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1.2"/>
+<rect x="96" y="722" width="20" height="28" rx="6" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1.2"/>
+<rect x="94" y="748" width="24" height="8" rx="4" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1"/>
+<rect x="124" y="722" width="20" height="28" rx="6" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1.2"/>
+<rect x="122" y="748" width="24" height="8" rx="4" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1"/>
+<text x="120" y="792" font-size="13" font-family="system-ui,sans-serif" font-weight="800" fill="url(#gAV)" text-anchor="middle" letter-spacing="2">ASERVIA</text>
+<text x="120" y="808" font-size="9" font-family="system-ui,sans-serif" font-weight="400" fill="#94A3B8" text-anchor="middle" letter-spacing="2">.app</text>
+
+
+<!-- ═══════════════════════════════════════════════
+     VERSIÓN 4 — NAVBAR
+     ═══════════════════════════════════════════════ -->
+<rect x="240" y="548" width="414" height="72" rx="12" fill="url(#gBg1)"/>
+<text x="258" y="572" font-size="10" fill="#60A5FA" font-family="system-ui,sans-serif" font-weight="500" letter-spacing="2" opacity="0.55">NAVBAR / HEADER</text>
+<!-- Ícono mini -->
+<circle cx="278" cy="598" r="8" fill="url(#gIcon)" opacity="0.12"/>
+<circle cx="278" cy="598" r="4.5" fill="url(#gIcon)"/>
+<line x1="278" y1="598" x2="269" y2="591" stroke="url(#gIcon)" stroke-width="0.8" opacity="0.6"/>
+<circle cx="269" cy="591" r="2" fill="#60A5FA"/>
+<line x1="278" y1="598" x2="287" y2="591" stroke="url(#gIcon)" stroke-width="0.8" opacity="0.6"/>
+<circle cx="287" cy="591" r="2" fill="#A78BFA"/>
+<line x1="278" y1="598" x2="287" y2="605" stroke="url(#gIcon)" stroke-width="0.8" opacity="0.5"/>
+<circle cx="287" cy="605" r="2" fill="#A78BFA"/>
+<line x1="278" y1="598" x2="269" y2="605" stroke="url(#gIcon)" stroke-width="0.8" opacity="0.5"/>
+<circle cx="269" cy="605" r="1.8" fill="#60A5FA"/>
+<text x="298" y="609" font-size="28" font-family="system-ui,sans-serif" font-weight="800" fill="url(#gAV)" letter-spacing="2">ASERVIA</text>
+<!-- Robot mini navbar -->
+<line x1="568" y1="562" x2="568" y2="555" stroke="#A78BFA" stroke-width="1.2" stroke-linecap="round"/>
+<circle cx="568" cy="552" r="3" fill="#A78BFA"/>
+<rect x="558" y="556" width="20" height="15" rx="4" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1"/>
+<rect x="561" y="559" width="5" height="4" rx="1.5" fill="#60A5FA"/>
+<rect x="569" y="559" width="5" height="4" rx="1.5" fill="#A78BFA"/>
+<circle cx="562" cy="560" r="0.8" fill="#fff" opacity="0.8"/>
+<circle cx="570" cy="560" r="0.8" fill="#fff" opacity="0.8"/>
+<path d="M562 566 Q568 569 574 566" fill="none" stroke="url(#gAV)" stroke-width="1" stroke-linecap="round"/>
+<rect x="561" y="571" width="14" height="4" rx="1.5" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="0.8"/>
+<rect x="557" y="575" width="22" height="18" rx="4" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1"/>
+<text x="568" y="587" font-size="7" font-family="system-ui,sans-serif" font-weight="800" fill="url(#gAV)" text-anchor="middle">IA</text>
+<rect x="550" y="577" width="6" height="12" rx="3" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="0.8"/>
+<rect x="580" y="571" width="6" height="12" rx="3" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="0.8" transform="rotate(-25 583 577)"/>
+<rect x="559" y="593" width="8" height="12" rx="3" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="0.8"/>
+<rect x="569" y="593" width="8" height="12" rx="3" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="0.8"/>
+<rect x="557" y="604" width="10" height="4" rx="2" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="0.8"/>
+<rect x="567" y="604" width="10" height="4" rx="2" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="0.8"/>
+
+
+<!-- ═══════════════════════════════════════════════
+     VERSIÓN 5 — FIRMA CLARO
+     ═══════════════════════════════════════════════ -->
+<rect x="240" y="638" width="414" height="96" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.5"/>
+<text x="258" y="663" font-size="10" fill="#4338CA" font-family="system-ui,sans-serif" font-weight="500" letter-spacing="2" opacity="0.55">FIRMA / DOCUMENTOS</text>
+<text x="258" y="712" font-size="34" font-family="system-ui,sans-serif" font-weight="800" fill="url(#gAVdk)" letter-spacing="2">ASERVIA</text>
+<!-- Robot firma claro -->
+<line x1="530" y1="650" x2="530" y2="643" stroke="#7C3AED" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="530" cy="640" r="3.5" fill="#7C3AED"/>
+<rect x="520" y="644" width="20" height="14" rx="4" fill="#EDE9FF" stroke="url(#gAVdk)" stroke-width="1"/>
+<rect x="523" y="647" width="5" height="4" rx="1.5" fill="#3B82F6"/>
+<rect x="531" y="647" width="5" height="4" rx="1.5" fill="#7C3AED"/>
+<circle cx="524" cy="648" r="0.8" fill="#fff" opacity="0.9"/>
+<circle cx="532" cy="648" r="0.8" fill="#fff" opacity="0.9"/>
+<path d="M524 654 Q530 657 536 654" fill="none" stroke="url(#gAVdk)" stroke-width="1" stroke-linecap="round"/>
+<rect x="523" y="658" width="14" height="4" rx="1.5" fill="#EDE9FF" stroke="url(#gAVdk)" stroke-width="0.8"/>
+<rect x="520" y="662" width="20" height="16" rx="3" fill="#EDE9FF" stroke="url(#gAVdk)" stroke-width="1"/>
+<text x="530" y="673" font-size="7" font-family="system-ui,sans-serif" font-weight="800" fill="url(#gAVdk)" text-anchor="middle">IA</text>
+<rect x="514" y="663" width="5" height="11" rx="2.5" fill="#EDE9FF" stroke="url(#gAVdk)" stroke-width="0.8"/>
+<rect x="541" y="659" width="5" height="11" rx="2.5" fill="#EDE9FF" stroke="url(#gAVdk)" stroke-width="0.8" transform="rotate(-25 543 664)"/>
+<rect x="522" y="678" width="8" height="10" rx="3" fill="#EDE9FF" stroke="url(#gAVdk)" stroke-width="0.8"/>
+<rect x="531" y="678" width="8" height="10" rx="3" fill="#EDE9FF" stroke="url(#gAVdk)" stroke-width="0.8"/>
+<rect x="520" y="687" width="10" height="4" rx="2" fill="#EDE9FF" stroke="url(#gAVdk)" stroke-width="0.8"/>
+<rect x="530" y="687" width="10" height="4" rx="2" fill="#EDE9FF" stroke="url(#gAVdk)" stroke-width="0.8"/>
+<text x="554" y="712" font-size="13" font-family="system-ui,sans-serif" font-weight="400" fill="#94A3B8" letter-spacing="1">.app</text>
+
+
+<!-- ═══════════════════════════════════════════════
+     VERSIÓN 6 — FIRMA OSCURO
+     ═══════════════════════════════════════════════ -->
+<rect x="240" y="746" width="414" height="96" rx="12" fill="url(#gBg1)"/>
+<text x="258" y="771" font-size="10" fill="#60A5FA" font-family="system-ui,sans-serif" font-weight="500" letter-spacing="2" opacity="0.55">OSCURO COMPACTO</text>
+<text x="258" y="820" font-size="34" font-family="system-ui,sans-serif" font-weight="800" fill="url(#gAV)" letter-spacing="2">ASERVIA</text>
+<!-- Robot firma oscuro -->
+<line x1="530" y1="758" x2="530" y2="751" stroke="#A78BFA" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="530" cy="748" r="3.5" fill="#A78BFA"/>
+<rect x="520" y="752" width="20" height="14" rx="4" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1"/>
+<rect x="523" y="755" width="5" height="4" rx="1.5" fill="#60A5FA"/>
+<rect x="531" y="755" width="5" height="4" rx="1.5" fill="#A78BFA"/>
+<circle cx="524" cy="756" r="0.8" fill="#fff" opacity="0.9"/>
+<circle cx="532" cy="756" r="0.8" fill="#fff" opacity="0.9"/>
+<path d="M524 762 Q530 765 536 762" fill="none" stroke="url(#gAV)" stroke-width="1" stroke-linecap="round"/>
+<rect x="523" y="766" width="14" height="4" rx="1.5" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="0.8"/>
+<rect x="520" y="770" width="20" height="16" rx="3" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="1"/>
+<text x="530" y="781" font-size="7" font-family="system-ui,sans-serif" font-weight="800" fill="url(#gAV)" text-anchor="middle">IA</text>
+<rect x="514" y="771" width="5" height="11" rx="2.5" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="0.8"/>
+<rect x="541" y="767" width="5" height="11" rx="2.5" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="0.8" transform="rotate(-25 543 772)"/>
+<rect x="522" y="786" width="8" height="10" rx="3" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="0.8"/>
+<rect x="531" y="786" width="8" height="10" rx="3" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="0.8"/>
+<rect x="520" y="795" width="10" height="4" rx="2" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="0.8"/>
+<rect x="530" y="795" width="10" height="4" rx="2" fill="url(#gBody)" stroke="url(#gAV)" stroke-width="0.8"/>
+<text x="554" y="820" font-size="13" font-family="system-ui,sans-serif" font-weight="400" fill="#4F8EF7" letter-spacing="1" opacity="0.6">.app</text>
+
+</svg>
