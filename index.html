@@ -207,6 +207,20 @@
     }
     .about h2 { font-size: 2rem; font-weight: 800; margin-bottom: 1.5rem; }
     .about p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
+    .about-etymology {
+      display: inline-flex; align-items: flex-start; gap: 1rem;
+      background: rgba(108,92,231,0.08); border: 1px solid rgba(108,92,231,0.2);
+      border-radius: 14px; padding: 1.25rem 1.5rem;
+      text-align: left; margin: 1.5rem 0;
+    }
+    .about-etymology .etym-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .about-etymology .etym-content { }
+    .about-etymology .etym-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 2px;
+      color: var(--accent-light); text-transform: uppercase; margin-bottom: 0.35rem;
+    }
+    .about-etymology .etym-text { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+    .about-etymology .etym-text strong { color: var(--text); }
     .about .name {
       font-weight: 700;
       background: linear-gradient(135deg, var(--blue), var(--violet));
@@ -339,15 +353,16 @@
         <span class="arrow">&nearr;</span>
       </a>
 
-      <!-- ERP Ecuador -->
+      <!-- SIRC ERP IA -->
       <div class="product-card">
         <div class="product-icon" style="background: linear-gradient(135deg, #00b894, #00d2a0);">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
         </div>
-        <h3>ERP Ecuador</h3>
+        <h3>SIRC ERP IA</h3>
         <p class="desc">
-          Sistema de planificacion empresarial para PyMEs ecuatorianas. Contabilidad,
-          inventarios, produccion, nomina y reportes financieros integrados con IA.
+          Sistema Inteligente de Recursos Corporativos. ERP nativo para PyMEs ecuatorianas
+          con IA integrada: contabilidad, inventarios, produccion, nomina y reportes
+          financieros en tiempo real.
         </p>
         <div class="product-status status-soon">
           <svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="currentColor"/></svg>
@@ -355,15 +370,16 @@
         </div>
       </div>
 
-      <!-- Data Governance -->
+      <!-- Datalyze IA -->
       <div class="product-card">
         <div class="product-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
         </div>
-        <h3>Data Governance</h3>
+        <h3>Datalyze IA</h3>
         <p class="desc">
-          Gobierno de datos empresarial. Catalogo de metadatos, calidad de datos,
-          perfilamiento, cumplimiento LOPDP Ecuador y trazabilidad de informacion critica.
+          Analiza tus datos empresariales con inteligencia artificial. Dashboards automaticos,
+          deteccion de tendencias, alertas predictivas y reportes ejecutivos generados
+          por IA en segundos.
         </p>
         <div class="product-status status-soon">
           <svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="currentColor"/></svg>
@@ -371,15 +387,16 @@
         </div>
       </div>
 
-      <!-- Flujos Compras -->
+      <!-- Aqyra Flujo de Compras IA -->
       <div class="product-card">
         <div class="product-icon" style="background: linear-gradient(135deg, #fd79a8, #e84393);">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
         </div>
-        <h3>Flujo de Compras AI</h3>
+        <h3>Aqyra Flujo de Compras IA</h3>
         <p class="desc">
-          Gestion de compras y aprobaciones con integracion SAP B1. Solicitudes,
-          cotizaciones, ordenes de compra y seguimiento de proveedores automatizado.
+          Gestion inteligente de compras y aprobaciones. Solicitudes, cotizaciones,
+          ordenes de compra y seguimiento de proveedores automatizado con IA,
+          con integracion nativa a SAP B1.
         </p>
         <div class="product-status status-soon">
           <svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="currentColor"/></svg>
@@ -399,6 +416,18 @@
       la normativa ecuatoriana (SRI, IESS, Supercias, MDT) y automatizan
       lo que antes requeria horas de trabajo manual.
     </p>
+    <div class="about-etymology">
+      <div class="etym-icon">💡</div>
+      <div class="etym-content">
+        <div class="etym-label">¿Por qué ASEVIA?</div>
+        <div class="etym-text">
+          <strong>ASEVIA</strong> nace de la fusion entre <strong>Asesoría Empresarial</strong>
+          e <strong>Inteligencia Artificial</strong> — una sola palabra que resume nuestra mision:
+          ser el asesor inteligente que toda empresa y emprendedor ecuatoriano necesita,
+          disponible 24/7 y sin errores humanos.
+        </div>
+      </div>
+    </div>
     <p>
       Creada por un <span class="name">grupo de ingenieros IA ecuatorianos</span>,
       especializados en transformacion digital, inteligencia artificial
