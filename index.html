@@ -13,6 +13,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- ── Vercel Analytics (pageviews + geo, automático en Vercel) ── -->
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- ── Google Analytics 4 ────────────────────────────────────────
+       PASO: Ve a analytics.google.com → Crear cuenta → Nueva propiedad
+       → Flujo de datos web → asevia.app → copia el Measurement ID (G-XXXXXXXX)
+       y reemplaza G-XXXXXXXXXX en las dos líneas de abajo.
+  ──────────────────────────────────────────────────────────────── -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -855,10 +871,18 @@
     </div>
     <div class="f-bottom">
       <p>© 2026 ASEVIA. Todos los derechos reservados.</p>
-      <div class="f-links">
-        <a href="mailto:info@asevia.app">info@asevia.app</a>
-        <a href="https://declaraai.asevia.app">DeclaraAI</a>
-        <a href="#">LinkedIn</a>
+      <div style="display:flex;align-items:center;gap:1rem">
+        <a href="https://hits.seeyoufarm.com" target="_blank" rel="noopener noreferrer"
+           title="Contador de visitas" style="opacity:.55;transition:opacity .2s"
+           onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.55">
+          <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fasevia.app&count_bg=%234F46E5&title_bg=%231c1c2e&icon=eye.svg&icon_color=%23818CF8&title=visitas&edge_flat=true"
+               alt="Visitas a ASEVIA" style="height:20px;border-radius:5px;display:block" />
+        </a>
+        <div class="f-links">
+          <a href="mailto:info@asevia.app">info@asevia.app</a>
+          <a href="https://declaraai.asevia.app">DeclaraAI</a>
+          <a href="#">LinkedIn</a>
+        </div>
       </div>
     </div>
   </footer>
