@@ -186,6 +186,21 @@
       display: flex; gap: 1rem; margin-top: 2.5rem;
       flex-wrap: wrap; justify-content: center;
     }
+    .hero-pills {
+      display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center;
+      margin-top: 2rem;
+    }
+    .hpill {
+      display: inline-flex; align-items: center; gap: .4rem;
+      padding: .38rem .9rem; border-radius: 100px;
+      font-size: .78rem; font-weight: 600; text-decoration: none;
+      background: var(--pr-dim); border: 1px solid var(--pr-border);
+      color: var(--pr-light); transition: all .2s;
+    }
+    .hpill:hover { background: rgba(79,70,229,.18); border-color: var(--pr-light); color: #fff; }
+    .hpill-live { color: var(--green); background: var(--green-dim); border-color: rgba(16,185,129,.25); }
+    .hpill-live:hover { background: rgba(16,185,129,.2); color: #fff; }
+
     .hero-proof {
       margin-top: 1.75rem; font-size: .8rem; color: var(--text-faint);
       display: flex; align-items: center; gap: .6rem; justify-content: center;
@@ -245,6 +260,53 @@
       letter-spacing: -.025em; line-height: 1.2;
     }
     .sec-sub { color: var(--text-muted); margin-top: .75rem; font-size: 1rem; }
+
+    /* ══════════════ AUDIENCE ════════════════ */
+    .audience-sec { padding: 6rem 2rem; text-align: center; }
+    .audience-wrap { max-width: 1140px; margin: 0 auto; }
+    .audience-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(245px,1fr));
+      gap: 1.25rem; text-align: left; margin-top: 3.5rem;
+    }
+    .aud-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 18px; padding: 1.75rem 1.5rem;
+      display: flex; flex-direction: column; gap: .5rem;
+      transition: border-color .25s, transform .25s;
+      position: relative; overflow: hidden;
+    }
+    .aud-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(79,70,229,.04), transparent);
+      pointer-events: none;
+    }
+    .aud-card:hover { border-color: var(--pr-border); transform: translateY(-3px); }
+    .aud-accent {
+      border-color: var(--pr-border);
+      background: linear-gradient(135deg, rgba(79,70,229,.08), rgba(124,58,237,.04));
+    }
+    .aud-accent:hover { border-color: var(--pr-light); }
+    .aud-icon { font-size: 2rem; margin-bottom: .25rem; }
+    .aud-card h3 { font-size: 1.1rem; font-weight: 800; color: var(--text); margin: 0; }
+    .aud-role { font-size: .78rem; color: var(--text-faint); font-style: italic; margin: 0; }
+    .aud-list {
+      list-style: none; padding: 0; margin: .75rem 0 0;
+      display: flex; flex-direction: column; gap: .5rem; flex: 1;
+    }
+    .aud-list li {
+      font-size: .83rem; color: var(--text-muted); line-height: 1.5;
+      padding-left: 1.2rem; position: relative;
+    }
+    .aud-list li::before {
+      content: '✓'; position: absolute; left: 0;
+      color: var(--green); font-size: .72rem; font-weight: 800; top: .1rem;
+    }
+    .aud-product {
+      margin-top: 1.25rem; font-size: .72rem; font-weight: 700;
+      color: var(--pr-light); background: var(--pr-dim);
+      border: 1px solid var(--pr-border); border-radius: 100px;
+      padding: .3rem .85rem; width: fit-content; letter-spacing: .02em;
+    }
 
     /* ══════════════ PAIN ═════════════════════ */
     .pain { max-width: 1100px; margin: 0 auto; padding: 6rem 2rem; text-align: center; }
@@ -480,7 +542,7 @@
     @media (max-width: 640px) {
       .nav-links { display: none; }
       .nav-toggle { display: flex; }
-      .pain-grid, .products-grid { grid-template-columns: 1fr; }
+      .pain-grid, .products-grid, .audience-grid { grid-template-columns: 1fr; }
       .hero-cta { flex-direction: column; align-items: stretch; }
       .hero-cta > * { text-align: center; justify-content: center; }
       .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -538,24 +600,34 @@
     </div>
 
     <h1>
-      Declara, factura y gestiona<br/>
-      tu empresa con <span class="grad">inteligencia artificial</span>
+      La plataforma de IA que trabaja<br/>
+      por tu empresa, <span class="grad">24/7</span>
     </h1>
-    <p class="hero-sub">El contador digital que nunca duerme.</p>
+    <p class="hero-sub">Cuatro soluciones especializadas. Un solo ecosistema. Construido para la empresa latinoamericana.</p>
     <p class="hero-body">
-      ASEVIA automatiza tus obligaciones con el SRI, emite facturas electrónicas
-      y te avisa antes de cada vencimiento. Sin errores. Sin multas. Sin complicaciones.
+      Desde tus declaraciones SRI hasta tu ERP, desde tus datos hasta tus compras —
+      ASEVIA conecta las piezas que tu empresa necesita para operar con inteligencia.
     </p>
 
     <div class="hero-cta">
-      <a href="https://declaraai.asevia.app" class="btn-primary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-        Probar DeclaraAI — Es gratis
+      <a href="#productos" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Explorar productos
       </a>
       <a href="#como-funciona" class="btn-secondary">
         Ver cómo funciona
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
       </a>
+    </div>
+
+    <div class="hero-pills">
+      <a href="#productos" class="hpill hpill-live">
+        <svg width="7" height="7"><circle cx="3.5" cy="3.5" r="3.5" fill="currentColor"/></svg>
+        DeclaraAI
+      </a>
+      <a href="#productos" class="hpill">✦ SIRC ERP IA</a>
+      <a href="#productos" class="hpill">✦ Datalyze IA</a>
+      <a href="#productos" class="hpill">✦ Aqyra</a>
     </div>
 
     <p class="hero-proof">
@@ -605,6 +677,71 @@
       </div>
     </div>
   </div>
+
+  <!-- ══ PARA QUIÉN ══════════════════════════════ -->
+  <section class="audience-sec">
+    <div class="audience-wrap">
+      <div class="tag">Para quién es ASEVIA</div>
+      <h2 class="sec-title">Una sola plataforma,<br/>múltiples perfiles</h2>
+      <p class="sec-sub">No importa si eres emprendedor, contador o gerente — ASEVIA se adapta a tu realidad.</p>
+
+      <div class="audience-grid">
+
+        <div class="aud-card">
+          <div class="aud-icon">🧑‍💼</div>
+          <h3>Persona Natural</h3>
+          <p class="aud-role">Contribuyente con RISE o RUC personal</p>
+          <ul class="aud-list">
+            <li>Organiza tus gastos deducibles automáticamente</li>
+            <li>Calcula cuánto debes devolver o pagar en el IR anual</li>
+            <li>Recibe alertas antes de cada vencimiento del SRI</li>
+            <li>Sin conocimientos contables necesarios</li>
+          </ul>
+          <div class="aud-product">DeclaraAI</div>
+        </div>
+
+        <div class="aud-card aud-accent">
+          <div class="aud-icon">🧮</div>
+          <h3>Contador / Asesor</h3>
+          <p class="aud-role">Profesional contable con múltiples clientes</p>
+          <ul class="aud-list">
+            <li>Gestiona varios RUCs desde un solo panel</li>
+            <li>Automatiza el Anexo Transaccional y formularios SRI</li>
+            <li>Detecta errores antes de enviar declaraciones</li>
+            <li>Dedica más tiempo a asesoría estratégica</li>
+          </ul>
+          <div class="aud-product">DeclaraAI · Datalyze IA</div>
+        </div>
+
+        <div class="aud-card">
+          <div class="aud-icon">🏢</div>
+          <h3>PyME / Empresa</h3>
+          <p class="aud-role">Gerente general, CFO o dueño de negocio</p>
+          <ul class="aud-list">
+            <li>ERP con IA integrada: contabilidad, inventarios, nómina</li>
+            <li>Gestión de compras y proveedores automatizada</li>
+            <li>Dashboards de datos en lenguaje natural</li>
+            <li>Integración nativa con SAP B1 y SRI Ecuador</li>
+          </ul>
+          <div class="aud-product">SIRC ERP IA · Aqyra · Datalyze IA</div>
+        </div>
+
+        <div class="aud-card">
+          <div class="aud-icon">🚀</div>
+          <h3>Emprendedor / Freelancer</h3>
+          <p class="aud-role">Autónomo, startup o negocio en crecimiento</p>
+          <ul class="aud-list">
+            <li>Emite facturas electrónicas en segundos</li>
+            <li>Lleva tu contabilidad básica sin contador</li>
+            <li>Controla tus ingresos y gastos con IA</li>
+            <li>Escala hacia ERP cuando tu negocio lo necesite</li>
+          </ul>
+          <div class="aud-product">DeclaraAI · SIRC ERP IA</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <!-- ══ PAIN POINTS ════════════════════════════ -->
   <section class="pain" id="soluciones">
@@ -784,15 +921,15 @@
   <!-- ══ CTA ════════════════════════════════════ -->
   <div class="cta-wrap">
     <div class="cta-card">
-      <h2>¿Listo para declarar en <span class="grad">15 minutos</span>?</h2>
+      <h2>¿Listo para operar con <span class="grad">inteligencia</span>?</h2>
       <p>
-        Únete a los empresarios ecuatorianos que ya automatizan sus obligaciones tributarias.<br/>
+        Empieza con DeclaraAI hoy — gratis — y desbloquea el ecosistema completo a medida que tu empresa crece.<br/>
         Sin tarjeta de crédito. Sin instalaciones. Sin complicaciones.
       </p>
       <div class="cta-btns">
         <a href="https://declaraai.asevia.app" class="btn-primary">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          Empezar gratis ahora
+          Probar DeclaraAI gratis
         </a>
         <a href="mailto:info@asevia.app" class="btn-secondary">Hablar con el equipo</a>
       </div>
