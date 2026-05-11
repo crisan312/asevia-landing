@@ -399,6 +399,51 @@
     }
     .badge-live { background: var(--green-dim); color: var(--green); }
     .badge-soon { background: var(--amber-dim); color: var(--amber); }
+    .badge-plan { background: rgba(99,102,241,.12); color: #818CF8; border: 1px solid rgba(99,102,241,.2); }
+
+    /* ══════════════ ROADMAP ══════════════════ */
+    .roadmap-sec { padding: 6rem 2rem; text-align: center; }
+    .roadmap-wrap { max-width: 900px; margin: 0 auto; }
+    .roadmap-line {
+      position: relative; margin-top: 3.5rem;
+      display: flex; flex-direction: column; gap: 0;
+    }
+    .roadmap-line::before {
+      content: ''; position: absolute; left: 119px; top: 12px; bottom: 12px;
+      width: 2px; background: linear-gradient(to bottom, var(--green), var(--pr), rgba(99,102,241,.2));
+    }
+    .rm-item {
+      display: grid; grid-template-columns: 120px 28px 1fr;
+      align-items: flex-start; gap: 1.25rem; padding: .9rem 0;
+    }
+    .rm-date {
+      text-align: right; font-size: .82rem; font-weight: 700;
+      color: var(--text-faint); padding-top: .15rem; line-height: 1.3;
+    }
+    .rm-date span { display: block; font-size: .7rem; font-weight: 500; color: var(--text-faint); opacity: .7; }
+    .rm-dot {
+      width: 28px; height: 28px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .75rem; flex-shrink: 0; position: relative; z-index: 1;
+    }
+    .rm-dot-live { background: var(--green); box-shadow: 0 0 12px rgba(16,185,129,.5); }
+    .rm-dot-soon { background: var(--amber); box-shadow: 0 0 10px rgba(245,158,11,.3); }
+    .rm-dot-plan { background: var(--surface); border: 2px solid rgba(99,102,241,.35); }
+    .rm-body { text-align: left; padding-top: .05rem; }
+    .rm-body h4 { font-size: .95rem; font-weight: 700; color: var(--text); margin: 0 0 .2rem; }
+    .rm-body p { font-size: .8rem; color: var(--text-muted); margin: 0; line-height: 1.5; }
+    .rm-tag {
+      display: inline-block; margin-top: .4rem;
+      font-size: .68rem; font-weight: 700; padding: .18rem .6rem; border-radius: 100px;
+    }
+    .rm-tag-live { background: var(--green-dim); color: var(--green); }
+    .rm-tag-soon { background: var(--amber-dim); color: var(--amber); }
+    .rm-tag-plan { background: rgba(99,102,241,.1); color: #818CF8; }
+    @media (max-width: 600px) {
+      .roadmap-line::before { left: 79px; }
+      .rm-item { grid-template-columns: 80px 24px 1fr; gap: .75rem; }
+      .rm-date { font-size: .72rem; }
+    }
     .badge svg { display: block; }
     /* Waitlist row */
     .waitlist {
@@ -840,7 +885,7 @@
         <p class="desc">Sistema Inteligente de Recursos Corporativos. ERP nativo para PyMEs ecuatorianas con IA: contabilidad, inventarios, producción, nómina y reportes financieros en tiempo real.</p>
         <div class="badge badge-soon">
           <svg width="7" height="7"><circle cx="3.5" cy="3.5" r="3.5" fill="currentColor"/></svg>
-          Próximamente
+          En vivo Junio 2026
         </div>
         <div class="waitlist">
           <input class="wl-input" type="email" placeholder="tu@email.com" aria-label="Email para lista de espera SIRC ERP" />
@@ -857,7 +902,7 @@
         <p class="desc">Analiza tus datos empresariales con inteligencia artificial. Dashboards automáticos, detección de tendencias, alertas predictivas y reportes ejecutivos en segundos.</p>
         <div class="badge badge-soon">
           <svg width="7" height="7"><circle cx="3.5" cy="3.5" r="3.5" fill="currentColor"/></svg>
-          Próximamente
+          En vivo Julio 2026
         </div>
         <div class="waitlist">
           <input class="wl-input" type="email" placeholder="tu@email.com" aria-label="Email para lista de espera Datalyze" />
@@ -874,7 +919,7 @@
         <p class="desc">Gestión inteligente de compras y aprobaciones con integración nativa con ERPs. Solicitudes, cotizaciones, órdenes de compra y seguimiento de proveedores automatizado.</p>
         <div class="badge badge-soon">
           <svg width="7" height="7"><circle cx="3.5" cy="3.5" r="3.5" fill="currentColor"/></svg>
-          Próximamente
+          En vivo Agosto 2026
         </div>
         <div class="waitlist">
           <input class="wl-input" type="email" placeholder="tu@email.com" aria-label="Email para lista de espera Aqyra" />
@@ -882,6 +927,140 @@
         </div>
       </div>
 
+      <!-- CRM Multi-ERP -->
+      <div class="card">
+        <div class="card-icon" style="background:linear-gradient(135deg,#0EA5E9,#0284C7)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>CRM IA Multi-ERP</h3>
+        <p class="desc">Gestión de clientes con inteligencia artificial conectada a múltiples ERPs. Pipeline de ventas, seguimiento automático, scoring predictivo y sincronización bidireccional con tu sistema contable.</p>
+        <div class="badge badge-plan">
+          <svg width="7" height="7"><circle cx="3.5" cy="3.5" r="3.5" fill="currentColor"/></svg>
+          Septiembre 2026
+        </div>
+        <div class="waitlist">
+          <input class="wl-input" type="email" placeholder="tu@email.com" aria-label="Email para lista de espera CRM" />
+          <button class="wl-btn" onclick="joinWaitlist(this)">Avísame</button>
+        </div>
+      </div>
+
+      <!-- Plataforma Legal -->
+      <div class="card">
+        <div class="card-icon" style="background:linear-gradient(135deg,#8B5CF6,#6D28D9)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Plataforma Legal IA</h3>
+        <p class="desc">Gestión de contratos, expedientes y obligaciones legales con IA. Revisión automática de cláusulas, alertas de vencimiento, generación de documentos y cumplimiento normativo LATAM.</p>
+        <div class="badge badge-plan">
+          <svg width="7" height="7"><circle cx="3.5" cy="3.5" r="3.5" fill="currentColor"/></svg>
+          Octubre 2026
+        </div>
+        <div class="waitlist">
+          <input class="wl-input" type="email" placeholder="tu@email.com" aria-label="Email para lista de espera Legal" />
+          <button class="wl-btn" onclick="joinWaitlist(this)">Avísame</button>
+        </div>
+      </div>
+
+      <!-- EduCore -->
+      <div class="card">
+        <div class="card-icon" style="background:linear-gradient(135deg,#F59E0B,#D97706)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <h3>EduCore — Plataforma Colegios</h3>
+        <p class="desc">Sistema integral para instituciones educativas: LMS con notificaciones push a padres, facturación electrónica SRI automática, pasarela de pagos integrada y alertas de seguridad en tiempo real (entrada/salida de alumnos).</p>
+        <div class="badge badge-plan">
+          <svg width="7" height="7"><circle cx="3.5" cy="3.5" r="3.5" fill="currentColor"/></svg>
+          Noviembre 2026
+        </div>
+        <div class="waitlist">
+          <input class="wl-input" type="email" placeholder="tu@email.com" aria-label="Email para lista de espera EduCore" />
+          <button class="wl-btn" onclick="joinWaitlist(this)">Avísame</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ ROADMAP ════════════════════════════════ -->
+  <section class="roadmap-sec">
+    <div class="roadmap-wrap">
+      <div class="tag">Hoja de ruta</div>
+      <h2 class="sec-title">Cuándo llega cada solución</h2>
+      <p class="sec-sub">Construimos en público — aquí puedes ver exactamente qué viene y cuándo.</p>
+
+      <div class="roadmap-line">
+
+        <div class="rm-item">
+          <div class="rm-date">Mar 2026<span>Completado</span></div>
+          <div class="rm-dot rm-dot-live">✓</div>
+          <div class="rm-body">
+            <h4>DeclaraAI</h4>
+            <p>Plataforma tributaria IA. Declaraciones SRI, facturación electrónica y los 47 formularios automatizados.</p>
+            <span class="rm-tag rm-tag-live">En vivo</span>
+          </div>
+        </div>
+
+        <div class="rm-item">
+          <div class="rm-date">Jun 2026<span>Próximo</span></div>
+          <div class="rm-dot rm-dot-soon">→</div>
+          <div class="rm-body">
+            <h4>SIRC ERP IA</h4>
+            <p>ERP inteligente con IA conversacional. Contabilidad, inventarios, nómina y reportes en tiempo real.</p>
+            <span class="rm-tag rm-tag-soon">En desarrollo</span>
+          </div>
+        </div>
+
+        <div class="rm-item">
+          <div class="rm-date">Jul 2026<span>Planificado</span></div>
+          <div class="rm-dot rm-dot-plan">◦</div>
+          <div class="rm-body">
+            <h4>Datalyze IA</h4>
+            <p>Análisis de datos empresariales en lenguaje natural. Dashboards automáticos y alertas predictivas.</p>
+            <span class="rm-tag rm-tag-plan">Planificado</span>
+          </div>
+        </div>
+
+        <div class="rm-item">
+          <div class="rm-date">Ago 2026<span>Planificado</span></div>
+          <div class="rm-dot rm-dot-plan">◦</div>
+          <div class="rm-body">
+            <h4>Aqyra Flujo de Compras IA</h4>
+            <p>Gestión inteligente de compras, aprobaciones y proveedores con integración nativa con ERPs.</p>
+            <span class="rm-tag rm-tag-plan">Planificado</span>
+          </div>
+        </div>
+
+        <div class="rm-item">
+          <div class="rm-date">Sep 2026<span>Planificado</span></div>
+          <div class="rm-dot rm-dot-plan">◦</div>
+          <div class="rm-body">
+            <h4>CRM IA Multi-ERP</h4>
+            <p>CRM con IA conectado a múltiples ERPs. Pipeline de ventas, scoring predictivo y sincronización contable.</p>
+            <span class="rm-tag rm-tag-plan">Planificado</span>
+          </div>
+        </div>
+
+        <div class="rm-item">
+          <div class="rm-date">Oct 2026<span>Planificado</span></div>
+          <div class="rm-dot rm-dot-plan">◦</div>
+          <div class="rm-body">
+            <h4>Plataforma Legal IA</h4>
+            <p>Gestión de contratos y expedientes legales con IA. Revisión automática de cláusulas y cumplimiento normativo.</p>
+            <span class="rm-tag rm-tag-plan">Planificado</span>
+          </div>
+        </div>
+
+        <div class="rm-item">
+          <div class="rm-date">Nov 2026<span>Planificado</span></div>
+          <div class="rm-dot rm-dot-plan">◦</div>
+          <div class="rm-body">
+            <h4>EduCore — Plataforma Colegios</h4>
+            <p>LMS + notificaciones push a padres + facturación SRI automática + alertas de seguridad de alumnos.</p>
+            <span class="rm-tag rm-tag-plan">Planificado</span>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
