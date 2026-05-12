@@ -1688,27 +1688,27 @@
           <circle cx="210" cy="210" r="115" fill="none" stroke="rgba(79,70,229,0.1)" stroke-width="1"/>
         </svg>
         <div class="dcu-center">
-          <span class="center-emoji">👤</span>
-          Usuario<br/>en el Centro
+          <span class="center-emoji" id="dcu-center-emoji">👤</span>
+          <span id="dcu-center-label">Persona Natural<br/>Contador · PyME</span>
         </div>
         <!-- 6 nodes at orbit r=152, angles: 270, 330, 30, 90, 150, 210 degrees -->
         <div class="dcu-node" data-dcu="investigacion" style="top:19px; left:50%; transform:translateX(-50%); cursor:pointer;">
           <span class="n-emoji">🔍</span>Investigación
         </div>
         <div class="dcu-node" data-dcu="casos" style="top:72px; right:14px; cursor:pointer;">
-          <span class="n-emoji">💡</span>Casos de Uso
+          <span class="n-emoji">🇪🇨</span>Ecuador
         </div>
         <div class="dcu-node" data-dcu="disenio" style="bottom:72px; right:14px; cursor:pointer;">
-          <span class="n-emoji">🎨</span>Diseño UI
+          <span class="n-emoji">🌎</span>LATAM
         </div>
         <div class="dcu-node" data-dcu="validacion" style="bottom:19px; left:50%; transform:translateX(-50%); cursor:pointer;">
-          <span class="n-emoji">✅</span>Validación
+          <span class="n-emoji">📰</span>Blog IA
         </div>
         <div class="dcu-node" data-dcu="desarrollo" style="bottom:72px; left:14px; cursor:pointer;">
-          <span class="n-emoji">⚙️</span>Desarrollo
+          <span class="n-emoji">⚙️</span>Tecnología
         </div>
         <div class="dcu-node" data-dcu="innovacion" style="top:72px; left:14px; cursor:pointer;">
-          <span class="n-emoji">🚀</span>Innovación
+          <span class="n-emoji">🗓️</span>Roadmap
         </div>
       </div>
     </div>
@@ -2849,6 +2849,9 @@
 </div>
 <style>
 @keyframes dcuFade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes centerPulse{0%,100%{box-shadow:0 0 30px rgba(79,70,229,0.4)}50%{box-shadow:0 0 50px rgba(124,58,237,0.6),0 0 80px rgba(79,70,229,0.3)}}
+#dcu-center-label{font-size:.62rem;font-weight:800;color:#818CF8;text-align:center;line-height:1.5;}
+.dcu-center{animation:centerPulse 3s ease-in-out infinite!important;}
 [data-dcu]{cursor:pointer!important}
 [data-dcu]:hover{box-shadow:0 0 22px rgba(79,70,229,0.45)!important}
 [data-dcu].dcu-active{border-color:#818CF8!important;background:rgba(79,70,229,0.15)!important}
@@ -2857,52 +2860,46 @@
 (function(){
 var D={
   investigacion:{
-    icon:"🔍",
-    step:"Paso 1 de 6 · Metodología DCU — ASEVIA",
-    title:"Investigación — Lo que descubrimos en Ecuador",
-    desc:"Entrevistamos directamente a los 3 segmentos que servimos para entender sus dolores reales antes de diseñar cualquier producto.",
-    example:"👤 PERSONA NATURAL / RUC: El 68% no sabía exactamente cuándo vencía su declaración mensual. El 41% había pagado al menos una multa al SRI por olvido o error. Muchos usaban recordatorios en papel o WhatsApp.\n\n📊 CONTADOR / ASESOR: Contadores con 30-80 clientes RUC perdían hasta 6 días al mes solo en declaraciones manuales. El mayor miedo: cometer un error en un cliente que genere multa y perder la relación.\n\n🏢 PyME / EMPRESA: Los gerentes de PyMEs no tenían visibilidad de sus finanzas en tiempo real. Esperaban hasta el cierre mensual del contador para saber si ganaban o perdían dinero.",
+    icon:"🔍",step:"Investigación · ASEVIA",
+    title:"¿A quién sirve ASEVIA?",
+    desc:"ASEVIA identifica 4 perfiles de usuario con necesidades distintas. Cada producto fue diseñado para resolver el problema específico de cada perfil.",
+    example:"👤 PERSONA NATURAL / RUC\nTiene RUC o RISE, factura servicios o productos. Principal dolor: declarar el F104/F103 al SRI cada mes sin errores. Solución: DeclaraAI automatiza las 47 declaraciones del SRI — de 4 horas a 52 segundos.\n\n📊 CONTADOR / ASESOR\nGestiona entre 20 y 100+ RUCs de clientes. Principal dolor: el tiempo masivo que consume declarar a todos antes del vencimiento. Solución: DeclaraAI Multi-RUC — procesa 47 clientes en paralelo en menos de 1 hora.\n\n🏢 PyME / EMPRESA\nEmpresa mediana que necesita ERP, inventarios, nómina y reportes. Principal dolor: falta de visibilidad financiera en tiempo real. Solución: ERP IA EC (Junio 2026) — el primer ERP ecuatoriano con IA nativa.\n\n🚀 EMPRENDEDOR / FREELANCER\nEmprendedor que factura servicios y necesita controlar gastos y cumplir con el SRI. Solución: DeclaraAI + análisis de gastos y tarjetas de crédito con IA.",
     products:["🇪🇨 DeclaraAI","🇪🇨 ERP IA EC","🌎 Datalyze IA"]
   },
   casos:{
-    icon:"📋",
-    step:"Paso 2 de 6 · Metodología DCU — ASEVIA",
-    title:"Casos de Uso — Flujos diseñados para cada segmento",
-    desc:"Definimos los flujos exactos de uso para cada tipo de usuario. Cada caso de uso tiene un objetivo claro, pasos mínimos y un resultado medible.",
-    example:"👤 PERSONA NATURAL: Caso #1 — Carlos tiene RUC de persona natural, factura servicios de consultoría. Flujo: ingresa a DeclaraAI → el agente importa sus facturas del SRI automáticamente → calcula IVA → llena F104 → envía. Total: 3 clics, 52 segundos.\n\n📊 CONTADOR: Caso #2 — Patricia tiene 47 clientes. Flujo: carga su lista de RUCs → DeclaraAI procesa todos en paralelo → alerta si alguno tiene inconsistencia → declara los aprobados en lote. Ahorra 5 días de trabajo mensual.\n\n🏢 PyME: Caso #3 — Empresa de alimentos necesita ver rentabilidad por producto. Flujo: conecta su ERP IA EC → Datalyze IA genera dashboard automático → gerente consulta en lenguaje natural: '¿cuál producto tiene mayor margen este mes?'",
-    products:["🇪🇨 DeclaraAI","🌎 Datalyze IA","🌎 Aqyra"]
+    icon:"📋",step:"Productos Ecuador · ASEVIA",
+    title:"🇪🇨 Productos para Ecuador",
+    desc:"Dos productos diseñados específicamente para la normativa ecuatoriana: el SRI, IESS, Superintendencia de Compañías y legislación laboral del MDT.",
+    example:"🇪🇨 DeclaraAI — EN VIVO en declaraai.asevia.app\nAutomatiza los 47 formularios del SRI: F104 (IVA mensual), F103 (Retenciones en la fuente), F101 (Impuesto a la Renta anual), ATS (Anexo Transaccional), RDEP, Facturación Electrónica. El agente importa facturas del portal SRI, calcula automáticamente y envía antes del vencimiento.\n✅ Estado: EN VIVO desde Marzo 2026\n🎯 Para: Persona natural, contador con múltiples RUCs, PyME\n\n🇪🇨 ERP IA EC — Junio 2026\nPrimer ERP nativo para PyMEs ecuatorianas con IA conversacional: contabilidad automática, inventarios en tiempo real, nómina con IESS integrado, producción, reportes financieros. Integración nativa con DeclaraAI para declaraciones automáticas.\n📅 Estado: En desarrollo — lista de espera abierta\n🎯 Para: PyMEs, empresas medianas",
+    products:["🇪🇨 DeclaraAI — EN VIVO","🇪🇨 ERP IA EC — Junio 2026"]
   },
   disenio:{
-    icon:"🖥️",
-    step:"Paso 3 de 6 · Metodología DCU — ASEVIA",
-    title:"Diseño UI — Interfaz para cada perfil",
-    desc:"Cada perfil de usuario tiene una vista personalizada. El principio es uno: si requiere un manual, está mal diseñado. Máximo 3 clics para completar la tarea principal.",
-    example:"👤 PERSONA NATURAL: Dashboard simplificado — una sola pantalla con el estado de sus declaraciones, próximos vencimientos y botón grande 'Declarar ahora'. Sin terminología contable técnica.\n\n📊 CONTADOR: Vista multi-RUC — lista de todos sus clientes con semáforo de estado (verde/amarillo/rojo). Puede filtrar por fecha límite, ordenar por urgencia y aprobar declaraciones en lote con un clic.\n\n🏢 PyME: Panel ejecutivo — KPIs en tiempo real, gráficos de ventas vs gastos, alertas inteligentes. ERP IA EC fue prototipado 6 veces hasta que el CEO de una PyME pudo entender su situación financiera en menos de 30 segundos.",
-    products:["🇪🇨 DeclaraAI","🇪🇨 ERP IA EC","🌎 EduCore"]
+    icon:"🌎",step:"Suite LATAM · ASEVIA",
+    title:"🌎 Suite para Latinoamérica",
+    desc:"5 productos multi-país adaptados a la normativa, moneda e integraciones de cada país latinoamericano. Conectan con ERPs existentes sin reemplazarlos.",
+    example:"📊 Datalyze IA — Julio 2026\nAnálisis de datos empresariales en lenguaje natural. Sin SQL, sin reportes manuales. Pregunta: '¿cuál producto tiene mayor margen este mes?' y obtén el dashboard al instante.\n\n🛒 Aqyra Flujo de Compras IA — Agosto 2026\nGestión inteligente de compras: solicitudes desde móvil, aprobaciones automáticas por monto, órdenes de compra automáticas, trazabilidad completa. Integra con ERPs existentes.\n\n🤝 CRM IA Multi-ERP — Septiembre 2026\nCRM con IA conectado a múltiples ERPs. Pipeline de ventas, scoring predictivo de clientes, seguimiento automático, sincronización bidireccional contable.\n\n⚖️ Plataforma Legal IA — Octubre 2026\nGestión de contratos, revisión automática de cláusulas, alertas de vencimiento, cumplimiento normativo LATAM.\n\n🎓 EduCore Colegios — Noviembre 2026\nLMS + notificaciones push a padres, facturación electrónica SRI automática, alertas de seguridad (salida del plantel).",
+    products:["🌎 Datalyze IA","🌎 Aqyra","🌎 CRM IA","🌎 Legal IA","🌎 EduCore"]
   },
   validacion:{
-    icon:"✅",
-    step:"Paso 4 de 6 · Metodología DCU — ASEVIA",
-    title:"Validación — Probado con usuarios reales en Ecuador",
-    desc:"Cada producto fue validado con usuarios reales antes del lanzamiento. Medimos errores, tiempos y satisfacción. Solo lanzamos cuando el 80%+ completa la tarea sin ayuda.",
-    example:"👤 PERSONA NATURAL: 30 beta testers sin conocimiento contable. Resultado: el 93% completó su primera declaración solo, sin asistencia. Tiempo promedio: 52 segundos (vs 4+ horas manual). 0 declaraciones rechazadas por el SRI.\n\n📊 CONTADOR: 15 contadores con carteras de 20-80 RUCs. Resultado: reducción de 5.2 días/mes a 6 horas/mes en trabajo de declaraciones. NPS: 91 puntos. Feedback clave: 'No puedo imaginar volver a hacerlo manual.'\n\n🏢 PyME: 8 empresas de diferentes sectores validaron el ERP IA EC durante 2 meses. Resultado: visibilidad financiera en tiempo real por primera vez, reducción del 40% en tiempo de cierre contable mensual.",
-    products:["🇪🇨 DeclaraAI","🇪🇨 ERP IA EC","🌎 CRM IA Multi-ERP"]
+    icon:"📰",step:"Blog IA · ASEVIA",
+    title:"Blog de Noticias IA — blog.asevia.app",
+    desc:"El hub de conocimiento de ASEVIA: noticias de inteligencia artificial, guías tributarias, manuales de uso, capacitaciones y eventos Zoom para presentar los productos.",
+    example:"📰 NOTICIAS IA\nActualizaciones semanales sobre inteligencia artificial aplicada a negocios en Ecuador y LATAM. Tendencias, casos de éxito, cambios normativos SRI.\n\n🎥 VIDEOS IA APRENDIZAJE\nTutoriales en video de cada producto ASEVIA. Desde cómo declarar el F104 hasta cómo analizar tus finanzas con IA.\n\n📚 MANUALES Y GUÍAS\nDocumentación detallada: guías del F104, F103, ATS, análisis de gastos, integración de ERPs. Todo en español, adaptado a Ecuador y LATAM.\n\n🎓 CAPACITACIONES\nCursos cortos sobre tributación con IA, gestión financiera inteligente y transformación digital para PyMEs.\n\n📅 EVENTOS ZOOM\nReuniones mensuales de presentación de productos, demostraciones en vivo y sesiones de preguntas con el equipo ASEVIA.\n\n🌐 Accede en: blog.asevia.app",
+    products:["📰 blog.asevia.app"]
   },
   desarrollo:{
-    icon:"⚙️",
-    step:"Paso 5 de 6 · Metodología DCU — ASEVIA",
-    title:"Desarrollo — Lo que construimos para ti",
-    desc:"Cada feature fue construido directamente desde los hallazgos de investigación y casos de uso. IA nativa desde el primer día — no añadida sobre software existente.",
-    example:"👤 PERSONA NATURAL → DeclaraAI: Agente que conecta con el portal SRI, importa facturas automáticamente, calcula IVA/IR, llena F104/F103/ATS y envía antes del vencimiento. Alertas 7, 3 y 1 día antes. Análisis de gastos desde estados de cuenta PDF.\n\n📊 CONTADOR → DeclaraAI Multi-RUC: Panel de gestión masiva, procesamiento en paralelo de múltiples clientes, detección de inconsistencias con IA, reportes automáticos por cliente, historial de declaraciones en la nube.\n\n🏢 PyME → ERP IA EC (Junio 2026): Módulos de contabilidad, inventarios, nómina y producción con IA central que procesa todo simultáneamente. Integración nativa con SRI para facturación electrónica. Dashboard ejecutivo con alertas predictivas.",
-    products:["🇪🇨 DeclaraAI","🇪🇨 ERP IA EC","🌎 Aqyra"]
+    icon:"⚙️",step:"Tecnología · ASEVIA",
+    title:"Tecnología que usamos",
+    desc:"ASEVIA construye con las mejores tecnologías de IA y cloud disponibles en 2026, priorizando velocidad, seguridad y escalabilidad para LATAM.",
+    example:"🤖 INTELIGENCIA ARTIFICIAL\nAgentes Claude (Anthropic) como núcleo de automatización. Los agentes leen, entienden y actúan — no solo responden. Cada producto tiene su propio agente especializado.\n\n☁️ INFRAESTRUCTURA CLOUD\nVercel + PostgreSQL (Neon) + Next.js 15 para el blog. Payload CMS 3 para gestión de contenido. Arquitectura serverless que escala automáticamente.\n\n🔒 SEGURIDAD Y COMPLIANCE\nDatos cifrados en tránsito y en reposo. Cumplimiento con LOPDP (Ley de Protección de Datos Ecuador). Conexiones con portal SRI mediante OAuth2. Sin almacenar contraseñas del SRI.\n\n📱 MULTIPLATAFORMA\nWeb app responsive + PWA para móvil. Funciona en cualquier dispositivo. Sin instalación requerida.\n\n🔗 INTEGRACIONES\nPortal SRI Ecuador (importación automática de facturas), ERPs existentes (SAP B1, Odoo, Monica), bancos ecuatorianos (importación de estados de cuenta PDF).",
+    products:["🇪🇨 DeclaraAI","🇪🇨 ERP IA EC","🌎 Suite LATAM"]
   },
   innovacion:{
-    icon:"💡",
-    step:"Paso 6 de 6 · Metodología DCU — ASEVIA",
-    title:"Innovación — Lo que viene para cada segmento",
-    desc:"El ciclo no termina con el lanzamiento. Cada mejora nace de los datos de uso reales y el feedback de nuestros usuarios. El roadmap 2026 fue construido 100% desde solicitudes reales.",
-    example:"👤 PERSONA NATURAL: Próximo — análisis de tarjetas de crédito con IA, plan de pago optimizado automático, predicción de cuánto deberás pagar al SRI el próximo trimestre.\n\n📊 CONTADOR: Próximo — IA que redacta respuestas automáticas a notificaciones del SRI, scoring de riesgo tributario por cliente, integración con Datalyze IA para reportes financieros ejecutivos para cada cliente.\n\n🏢 PyME: Próximo — Datalyze IA (Julio 2026) para análisis en lenguaje natural, Aqyra (Agosto 2026) para gestión de compras con aprobaciones automáticas, CRM IA Multi-ERP (Septiembre 2026) para conectar ventas con contabilidad en tiempo real.",
-    products:["🌎 Datalyze IA","🌎 Aqyra","🌎 CRM IA Multi-ERP"]
+    icon:"💡",step:"Roadmap 2026 · ASEVIA",
+    title:"El Ecosistema Completo — Roadmap 2026",
+    desc:"7 productos lanzándose mes a mes en 2026. Cada producto se integra nativamente con los demás para crear el ecosistema empresarial más completo de LATAM.",
+    example:"✅ Marzo 2026 — DeclaraAI EN VIVO\ndeclaraai.asevia.app · Declaraciones SRI automatizadas\n\n🟡 Junio 2026 — ERP IA EC\nERP nativo para PyMEs ecuatorianas con IA conversacional\n\n🔵 Julio 2026 — Datalyze IA\nAnálisis de datos en lenguaje natural para LATAM\n\n🔵 Agosto 2026 — Aqyra Flujo de Compras\nGestión inteligente de compras multi-ERP\n\n🔵 Septiembre 2026 — CRM IA Multi-ERP\nCRM con IA conectado a múltiples ERPs\n\n🔵 Octubre 2026 — Plataforma Legal IA\nGestión de contratos y cumplimiento normativo LATAM\n\n🔵 Noviembre 2026 — EduCore Colegios\nSistema integral para instituciones educativas\n\n🌐 Todos los productos: asevia.app",
+    products:["🗓️ 7 productos en 2026","🌎 Ecuador + LATAM"]
   }
 };
 document.querySelectorAll("[data-dcu]").forEach(function(n){
