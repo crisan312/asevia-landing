@@ -897,7 +897,7 @@
         <svg width="7" height="7"><circle cx="3.5" cy="3.5" r="3.5" fill="currentColor"/></svg>
         DeclaraAI ✅ EN VIVO
       </a>
-      <a href="#productos" class="hpill">✦ SIRC ERP IA</a>
+      <a href="#productos" class="hpill">✦ ERP IA EC</a>
       <a href="#productos" class="hpill">✦ Datalyze IA</a>
       <a href="#productos" class="hpill">✦ Aqyra</a>
       <a href="#productos" class="hpill">✦ CRM IA</a>
@@ -984,14 +984,14 @@
         <div class="nosotros-card">
           <div class="nosotros-card-icon">🎯</div>
           <h3>Nuestra Misión</h3>
-          <p>Desarrollar soluciones de software inteligente con IA que automatizan los procesos más críticos de empresas, contadores y personas naturales — comenzando con el ecosistema tributario y empresarial de Ecuador, expandiendo hacia toda Latinoamérica.</p>
+          <p>Asesorar y desarrollar servicios de IA que simplifican la gestión empresarial para personas naturales, contadores y PyMEs en Ecuador y Latinoamérica.</p>
         </div>
 
         <!-- Vision -->
         <div class="nosotros-card">
           <div class="nosotros-card-icon">🔭</div>
           <h3>Nuestra Visión</h3>
-          <p>Ser el ecosistema de software con inteligencia artificial más completo de Latinoamérica — donde las empresas de Ecuador y LATAM encuentren todo lo que necesitan para operar, crecer y competir en la era digital.</p>
+          <p>Ser el ecosistema líder de software con inteligencia artificial para empresas latinoamericanas en 2028 — presente en 3 países, con 7 productos integrados que cubren el ciclo completo de la gestión empresarial: desde la declaración tributaria hasta la formación educativa.</p>
         </div>
 
         <!-- Valores -->
@@ -1036,8 +1036,145 @@
       <p class="nosotros-tagline">
         De Ecuador para LATAM — <span>IA que trabaja mientras tú creces.</span>
       </p>
+
+      <!-- ══ DCU METHODOLOGY ══ -->
+      <div class="dcu-wrap">
+        <div class="tag" style="display:block;text-align:center;margin-bottom:.75rem;">Nuestra Metodología</div>
+        <h3 class="sec-title" style="text-align:center;font-size:1.5rem;">Diseño Centrado en el Usuario</h3>
+        <p class="sec-sub" style="text-align:center;margin-bottom:3rem;">Cada producto ASEVIA nace de entender profundamente el problema del usuario antes de escribir una línea de código.</p>
+
+        <div class="dcu-diagram">
+          <!-- Center -->
+          <div class="dcu-center">
+            <span class="dcu-center-icon">👤</span>
+            <span class="dcu-center-text">Usuario<br/>en el Centro</span>
+          </div>
+          <!-- 6 nodes -->
+          <div class="dcu-node dcu-n1">
+            <div class="dcu-node-dot">🔍</div>
+            <div class="dcu-node-label">Investigación</div>
+            <div class="dcu-node-sub">Entendemos a los usuarios</div>
+          </div>
+          <div class="dcu-node dcu-n2">
+            <div class="dcu-node-dot">📋</div>
+            <div class="dcu-node-label">Casos de Uso</div>
+            <div class="dcu-node-sub">Definimos interacciones</div>
+          </div>
+          <div class="dcu-node dcu-n3">
+            <div class="dcu-node-dot">🖥️</div>
+            <div class="dcu-node-label">Diseño UI</div>
+            <div class="dcu-node-sub">Prototipado &amp; evaluación</div>
+          </div>
+          <div class="dcu-node dcu-n4">
+            <div class="dcu-node-dot">✅</div>
+            <div class="dcu-node-label">Validación</div>
+            <div class="dcu-node-sub">Pruebas con usuarios reales</div>
+          </div>
+          <div class="dcu-node dcu-n5">
+            <div class="dcu-node-dot">⚙️</div>
+            <div class="dcu-node-label">Desarrollo</div>
+            <div class="dcu-node-sub">IA nativa desde el inicio</div>
+          </div>
+          <div class="dcu-node dcu-n6">
+            <div class="dcu-node-dot">💡</div>
+            <div class="dcu-node-label">Innovación</div>
+            <div class="dcu-node-sub">Mejora continua</div>
+          </div>
+          <!-- Orbit ring -->
+          <svg class="dcu-orbit" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="200" cy="200" r="155" fill="none" stroke="url(#dcu-grad)" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.5"/>
+            <defs>
+              <linearGradient id="dcu-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4F46E5"/>
+                <stop offset="50%" stop-color="#10B981"/>
+                <stop offset="100%" stop-color="#A78BFA"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
     </div>
   </section>
+
+  <style>
+    /* ══ DCU DIAGRAM ══ */
+    .dcu-wrap {
+      margin-top: 4rem;
+      padding: 3rem 2rem;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+    }
+    .dcu-diagram {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin: 0 auto;
+    }
+    .dcu-orbit {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      animation: dcu-spin 20s linear infinite;
+    }
+    @keyframes dcu-spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    .dcu-center {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--pr-dim), rgba(124,58,237,.15));
+      border: 2px solid var(--pr-border);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; z-index: 2;
+      box-shadow: 0 0 40px rgba(79,70,229,.2);
+    }
+    .dcu-center-icon { font-size: 1.6rem; line-height: 1; }
+    .dcu-center-text { font-size: .6rem; font-weight: 700; color: var(--pr-light); margin-top: .3rem; line-height: 1.3; }
+    .dcu-node {
+      position: absolute;
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; z-index: 3; width: 80px;
+    }
+    .dcu-node-dot {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--surface);
+      border: 2px solid var(--pr-border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      box-shadow: 0 0 16px rgba(79,70,229,.25);
+      transition: border-color .3s, box-shadow .3s;
+    }
+    .dcu-node:hover .dcu-node-dot {
+      border-color: var(--pr-light);
+      box-shadow: 0 0 24px rgba(79,70,229,.5);
+    }
+    .dcu-node-label { font-size: .62rem; font-weight: 700; color: var(--text); margin-top: .4rem; line-height: 1.2; }
+    .dcu-node-sub   { font-size: .52rem; color: var(--text-muted); margin-top: .15rem; line-height: 1.3; }
+    /* Position nodes around the circle (radius ~155px from center 200,200) */
+    .dcu-n1 { top: calc(200px - 155px - 22px - 40px); left: calc(200px - 40px); } /* top */
+    .dcu-n2 { top: calc(200px - 78px - 22px);         left: calc(200px + 134px - 40px); } /* top-right */
+    .dcu-n3 { top: calc(200px + 78px - 22px);         left: calc(200px + 134px - 40px); } /* bottom-right */
+    .dcu-n4 { top: calc(200px + 155px - 22px);        left: calc(200px - 40px); } /* bottom */
+    .dcu-n5 { top: calc(200px + 78px - 22px);         left: calc(200px - 134px - 40px); } /* bottom-left */
+    .dcu-n6 { top: calc(200px - 78px - 22px);         left: calc(200px - 134px - 40px); } /* top-left */
+    @media (max-width: 480px) {
+      .dcu-diagram { width: 300px; height: 300px; }
+      .dcu-n1 { top: calc(150px - 116px - 22px - 30px); left: calc(150px - 40px); }
+      .dcu-n2 { top: calc(150px - 58px - 22px);         left: calc(150px + 100px - 40px); }
+      .dcu-n3 { top: calc(150px + 58px - 22px);         left: calc(150px + 100px - 40px); }
+      .dcu-n4 { top: calc(150px + 116px - 22px);        left: calc(150px - 40px); }
+      .dcu-n5 { top: calc(150px + 58px - 22px);         left: calc(150px - 100px - 40px); }
+      .dcu-n6 { top: calc(150px - 58px - 22px);         left: calc(150px - 100px - 40px); }
+    }
+  </style>
 
   <!-- ══ PARA QUIÉN ════════════════════════════════════════════════ -->
   <section class="audience-sec" id="audiencia">
@@ -1084,7 +1221,7 @@
             <li>Integración con ERPs y SRI Ecuador</li>
             <li>Automatización de procesos clave</li>
           </ul>
-          <div class="aud-product">SIRC ERP IA · Aqyra · Datalyze IA</div>
+          <div class="aud-product">ERP IA EC · Aqyra · Datalyze IA</div>
         </div>
 
         <div class="aud-card">
@@ -1097,7 +1234,7 @@
             <li>Contabilidad básica sin contador</li>
             <li>Escala hacia ERP cuando lo necesites</li>
           </ul>
-          <div class="aud-product">DeclaraAI · SIRC ERP IA</div>
+          <div class="aud-product">DeclaraAI · ERP IA EC</div>
         </div>
 
       </div>
@@ -1253,12 +1390,12 @@
         </div>
       </a>
 
-      <!-- SIRC ERP IA -->
+      <!-- ERP IA EC -->
       <div class="card">
         <div class="card-icon" style="background:linear-gradient(135deg,#059669,#10B981)">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
         </div>
-        <h3>SIRC ERP IA</h3>
+        <h3>ERP IA EC</h3>
         <p class="desc">Sistema Inteligente de Recursos Corporativos. ERP nativo para PyMEs ecuatorianas con IA: contabilidad, inventarios, producción, nómina y reportes financieros en tiempo real.</p>
         <div class="badge badge-soon">
           <svg width="7" height="7"><circle cx="3.5" cy="3.5" r="3.5" fill="currentColor"/></svg>
@@ -1391,7 +1528,7 @@
           <div class="rm-date">Jun 2026<span>Próximo</span></div>
           <div class="rm-dot rm-dot-soon">→</div>
           <div class="rm-body">
-            <h4>SIRC ERP IA</h4>
+            <h4>ERP IA EC</h4>
             <p>ERP inteligente con IA conversacional. Contabilidad, inventarios, nómina y reportes en tiempo real.</p>
             <span class="rm-tag rm-tag-soon">En desarrollo</span>
           </div>
@@ -1482,11 +1619,11 @@
         </details>
         <details class="faq-item">
           <summary>¿Cuál es la diferencia entre los productos para Ecuador y los de LATAM?</summary>
-          <div class="faq-body">Los productos para Ecuador (DeclaraAI, SIRC ERP IA) están diseñados específicamente para el marco tributario del SRI, la legislación laboral ecuatoriana (IESS, MDT) y los estándares locales. Los productos de la Suite LATAM (Datalyze IA, Aqyra, CRM IA, Legal IA, EduCore) son multi-país y se adaptan a la normativa, moneda e integraciones de cada país latinoamericano donde operes.</div>
+          <div class="faq-body">Los productos para Ecuador (DeclaraAI, ERP IA EC) están diseñados específicamente para el marco tributario del SRI, la legislación laboral ecuatoriana (IESS, MDT) y los estándares locales. Los productos de la Suite LATAM (Datalyze IA, Aqyra, CRM IA, Legal IA, EduCore) son multi-país y se adaptan a la normativa, moneda e integraciones de cada país latinoamericano donde operes.</div>
         </details>
         <details class="faq-item">
           <summary>¿Son los 7 productos independientes o debo contratar todos?</summary>
-          <div class="faq-body">Son completamente independientes — puedes empezar con uno solo y agregar más a medida que tu empresa crece. No obstante, si utilizas varios productos ASEVIA, se integran entre sí de forma nativa: por ejemplo, DeclaraAI comparte datos con SIRC ERP IA y Datalyze IA sin configuración adicional.</div>
+          <div class="faq-body">Son completamente independientes — puedes empezar con uno solo y agregar más a medida que tu empresa crece. No obstante, si utilizas varios productos ASEVIA, se integran entre sí de forma nativa: por ejemplo, DeclaraAI comparte datos con ERP IA EC y Datalyze IA sin configuración adicional.</div>
         </details>
       </div>
     </div>
@@ -1609,7 +1746,7 @@
         <h4>Productos</h4>
         <ul>
           <li><a href="https://declaraai.asevia.app" target="_blank" rel="noopener">DeclaraAI</a></li>
-          <li><a href="#productos">SIRC ERP IA</a></li>
+          <li><a href="#productos">ERP IA EC</a></li>
           <li><a href="#productos">Datalyze IA</a></li>
           <li><a href="#productos">Aqyra Compras</a></li>
           <li><a href="#productos">CRM IA</a></li>
