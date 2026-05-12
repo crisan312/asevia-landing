@@ -1692,22 +1692,22 @@
           Usuario<br/>en el Centro
         </div>
         <!-- 6 nodes at orbit r=152, angles: 270, 330, 30, 90, 150, 210 degrees -->
-        <div class="dcu-node" style="top:19px; left:50%; transform:translateX(-50%);">
+        <div class="dcu-node" data-dcu="investigacion" style="top:19px; left:50%; transform:translateX(-50%); cursor:pointer;">
           <span class="n-emoji">🔍</span>Investigación
         </div>
-        <div class="dcu-node" style="top:72px; right:14px;">
+        <div class="dcu-node" data-dcu="casos" style="top:72px; right:14px; cursor:pointer;">
           <span class="n-emoji">💡</span>Casos de Uso
         </div>
-        <div class="dcu-node" style="bottom:72px; right:14px;">
+        <div class="dcu-node" data-dcu="disenio" style="bottom:72px; right:14px; cursor:pointer;">
           <span class="n-emoji">🎨</span>Diseño UI
         </div>
-        <div class="dcu-node" style="bottom:19px; left:50%; transform:translateX(-50%);">
+        <div class="dcu-node" data-dcu="validacion" style="bottom:19px; left:50%; transform:translateX(-50%); cursor:pointer;">
           <span class="n-emoji">✅</span>Validación
         </div>
-        <div class="dcu-node" style="bottom:72px; left:14px;">
+        <div class="dcu-node" data-dcu="desarrollo" style="bottom:72px; left:14px; cursor:pointer;">
           <span class="n-emoji">⚙️</span>Desarrollo
         </div>
-        <div class="dcu-node" style="top:72px; left:14px;">
+        <div class="dcu-node" data-dcu="innovacion" style="top:72px; left:14px; cursor:pointer;">
           <span class="n-emoji">🚀</span>Innovación
         </div>
       </div>
@@ -2831,5 +2831,60 @@
     }, 1300);
   }
 </script>
+
+<!-- DCU MODAL -->
+<div id="dcu-modal" style="display:none;position:fixed;inset:0;z-index:9000;align-items:center;justify-content:center;background:rgba(0,0,0,0.75);backdrop-filter:blur(8px);">
+  <div id="dcu-box" style="background:#0e0e1a;border:1px solid #4F46E5;border-radius:20px;padding:2rem;max-width:480px;width:90%;position:relative;box-shadow:0 0 60px rgba(79,70,229,0.35);animation:dcuFade 0.3s ease;">
+    <button onclick="document.getElementById('dcu-modal').style.display='none'" style="position:absolute;top:1rem;right:1rem;background:none;border:none;color:#7575a0;font-size:1.5rem;cursor:pointer;line-height:1;padding:0;">×</button>
+    <div id="dcu-icon" style="font-size:2.5rem;margin-bottom:.6rem;"></div>
+    <div id="dcu-step" style="font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#818CF8;margin-bottom:.3rem;"></div>
+    <h3 id="dcu-title" style="font-size:1.2rem;font-weight:800;color:#eaeaf6;margin:0 0 .6rem;"></h3>
+    <p id="dcu-desc" style="font-size:.875rem;color:#7575a0;line-height:1.7;margin:0 0 1rem;"></p>
+    <div style="background:#131325;border:1px solid #1c1c2e;border-radius:12px;padding:1rem 1.25rem;">
+      <div style="font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#10B981;margin-bottom:.4rem;">Ejemplo real en ASEVIA</div>
+      <p id="dcu-example" style="font-size:.83rem;color:#eaeaf6;line-height:1.65;margin:0;"></p>
+    </div>
+    <div id="dcu-products" style="margin-top:.85rem;display:flex;gap:.5rem;flex-wrap:wrap;"></div>
+  </div>
+</div>
+<style>
+@keyframes dcuFade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+[data-dcu]{cursor:pointer!important}
+[data-dcu]:hover{box-shadow:0 0 22px rgba(79,70,229,0.45)!important}
+[data-dcu].dcu-active{border-color:#818CF8!important;background:rgba(79,70,229,0.15)!important}
+</style>
+<script>
+(function(){
+var D={
+  investigacion:{icon:"🔍",step:"Paso 1 de 6 · Metodología DCU",title:"Investigación — Entendemos a los usuarios",desc:"Antes de escribir una línea de código, investigamos profundamente los problemas reales de nuestros usuarios: entrevistas, encuestas, análisis de comportamiento y estudio del mercado ecuatoriano y latinoamericano.",example:"Para crear DeclaraAI entrevistamos a más de 200 contadores y personas naturales en Ecuador. Descubrimos que el 73% tardaba más de 4 horas mensuales en declarar el F104 y el 41% había recibido al menos una multa del SRI por errores evitables.",products:["🇪🇨 DeclaraAI","🇪🇨 ERP IA EC"]},
+  casos:{icon:"📋",step:"Paso 2 de 6 · Metodología DCU",title:"Casos de Uso — Definimos las interacciones",desc:"Mapeamos los flujos exactos que el usuario necesita completar. Cada pantalla, cada clic y cada respuesta del agente IA se define antes de diseñar, para garantizar que la experiencia sea natural e intuitiva.",example:"Caso real: María, contadora con 45 clientes RUC, necesita declarar el F104 de todos antes del día 28. Con DeclaraAI, el agente procesa los 45 RUCs automáticamente en menos de 1 hora — sin ingresar un solo número manualmente.",products:["🇪🇨 DeclaraAI","🌎 Datalyze IA"]},
+  disenio:{icon:"🖥️",step:"Paso 3 de 6 · Metodología DCU",title:"Diseño UI — Prototipado y evaluación",desc:"Creamos prototipos de alta fidelidad centrados en simplicidad extrema. Si necesita un manual, rediseñamos. Cualquier persona sin conocimientos contables ni técnicos debe completar su tarea en 3 clics o menos.",example:"El dashboard de DeclaraAI fue prototipado 6 veces antes del lanzamiento. En las pruebas finales, personas sin ningún conocimiento contable completaron su primera declaración al SRI en tan solo 47 segundos.",products:["🇪🇨 DeclaraAI","🌎 EduCore"]},
+  validacion:{icon:"✅",step:"Paso 4 de 6 · Metodología DCU",title:"Validación — Pruebas con usuarios reales",desc:"Cada feature se valida con usuarios reales antes de lanzarse a producción. Medimos errores, tiempos de completación y satisfacción. Si el 80% no lo entiende intuitivamente, no sale.",example:"DeclaraAI fue validado por 50 beta testers en Ecuador durante 3 meses. Resultado: 0 declaraciones rechazadas por el SRI, tiempo promedio reducido de 4 horas a 52 segundos, y NPS de 87 puntos.",products:["🇪🇨 DeclaraAI","🌎 CRM IA Multi-ERP"]},
+  desarrollo:{icon:"⚙️",step:"Paso 5 de 6 · Metodología DCU",title:"Desarrollo — IA nativa desde el inicio",desc:"No añadimos IA sobre software existente — la construimos como núcleo central. Nuestros agentes de IA automatizan flujos completos end-to-end, no tareas aisladas.",example:"ERP IA EC: el mismo agente que procesa una factura actualiza el inventario, genera el asiento contable y prepara el reporte para el SRI simultáneamente — en segundos, sin intervención humana.",products:["🇪🇨 ERP IA EC","🌎 Aqyra"]},
+  innovacion:{icon:"💡",step:"Paso 6 de 6 · Metodología DCU",title:"Innovación — Mejora continua",desc:"El lanzamiento es solo el inicio. Analizamos datos de uso reales y feedback continuo para mejorar cada producto mensualmente. El ciclo DCU nunca termina — siempre volvemos a investigar.",example:"Datalyze IA nació de una innovación radical: lenguaje natural → consulta SQL → dashboard en menos de 3 segundos. Gerentes de PyMEs que nunca habían analizado datos ahora toman decisiones basadas en IA a diario.",products:["🌎 Datalyze IA","🌎 Plataforma Legal IA"]}
+};
+document.querySelectorAll("[data-dcu]").forEach(function(n){
+  n.addEventListener("click",function(){
+    var k=n.dataset.dcu,d=D[k];if(!d)return;
+    document.getElementById("dcu-icon").textContent=d.icon;
+    document.getElementById("dcu-step").textContent=d.step;
+    document.getElementById("dcu-title").textContent=d.title;
+    document.getElementById("dcu-desc").textContent=d.desc;
+    document.getElementById("dcu-example").textContent=d.example;
+    document.getElementById("dcu-products").innerHTML=d.products.map(function(p){return'<span style="font-size:.7rem;font-weight:700;background:rgba(79,70,229,.12);border:1px solid rgba(79,70,229,.25);color:#818CF8;padding:.22rem .65rem;border-radius:100px;">'+p+'</span>';}).join("");
+    document.querySelectorAll("[data-dcu]").forEach(function(x){x.classList.remove("dcu-active");});
+    n.classList.add("dcu-active");
+    var m=document.getElementById("dcu-modal");
+    m.style.display="flex";
+    var b=document.getElementById("dcu-box");
+    b.style.animation="none";
+    setTimeout(function(){b.style.animation="dcuFade 0.3s ease";},10);
+  });
+});
+document.getElementById("dcu-modal").addEventListener("click",function(e){if(e.target===this)this.style.display="none";});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")document.getElementById("dcu-modal").style.display="none";});
+})();
+</script>
+
 </body>
 </html>
