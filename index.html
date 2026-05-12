@@ -2856,12 +2856,54 @@
 <script>
 (function(){
 var D={
-  investigacion:{icon:"🔍",step:"Paso 1 de 6 · Metodología DCU",title:"Investigación — Entendemos a los usuarios",desc:"Antes de escribir una línea de código, investigamos profundamente los problemas reales de nuestros usuarios: entrevistas, encuestas, análisis de comportamiento y estudio del mercado ecuatoriano y latinoamericano.",example:"Para crear DeclaraAI entrevistamos a más de 200 contadores y personas naturales en Ecuador. Descubrimos que el 73% tardaba más de 4 horas mensuales en declarar el F104 y el 41% había recibido al menos una multa del SRI por errores evitables.",products:["🇪🇨 DeclaraAI","🇪🇨 ERP IA EC"]},
-  casos:{icon:"📋",step:"Paso 2 de 6 · Metodología DCU",title:"Casos de Uso — Definimos las interacciones",desc:"Mapeamos los flujos exactos que el usuario necesita completar. Cada pantalla, cada clic y cada respuesta del agente IA se define antes de diseñar, para garantizar que la experiencia sea natural e intuitiva.",example:"Caso real: María, contadora con 45 clientes RUC, necesita declarar el F104 de todos antes del día 28. Con DeclaraAI, el agente procesa los 45 RUCs automáticamente en menos de 1 hora — sin ingresar un solo número manualmente.",products:["🇪🇨 DeclaraAI","🌎 Datalyze IA"]},
-  disenio:{icon:"🖥️",step:"Paso 3 de 6 · Metodología DCU",title:"Diseño UI — Prototipado y evaluación",desc:"Creamos prototipos de alta fidelidad centrados en simplicidad extrema. Si necesita un manual, rediseñamos. Cualquier persona sin conocimientos contables ni técnicos debe completar su tarea en 3 clics o menos.",example:"El dashboard de DeclaraAI fue prototipado 6 veces antes del lanzamiento. En las pruebas finales, personas sin ningún conocimiento contable completaron su primera declaración al SRI en tan solo 47 segundos.",products:["🇪🇨 DeclaraAI","🌎 EduCore"]},
-  validacion:{icon:"✅",step:"Paso 4 de 6 · Metodología DCU",title:"Validación — Pruebas con usuarios reales",desc:"Cada feature se valida con usuarios reales antes de lanzarse a producción. Medimos errores, tiempos de completación y satisfacción. Si el 80% no lo entiende intuitivamente, no sale.",example:"DeclaraAI fue validado por 50 beta testers en Ecuador durante 3 meses. Resultado: 0 declaraciones rechazadas por el SRI, tiempo promedio reducido de 4 horas a 52 segundos, y NPS de 87 puntos.",products:["🇪🇨 DeclaraAI","🌎 CRM IA Multi-ERP"]},
-  desarrollo:{icon:"⚙️",step:"Paso 5 de 6 · Metodología DCU",title:"Desarrollo — IA nativa desde el inicio",desc:"No añadimos IA sobre software existente — la construimos como núcleo central. Nuestros agentes de IA automatizan flujos completos end-to-end, no tareas aisladas.",example:"ERP IA EC: el mismo agente que procesa una factura actualiza el inventario, genera el asiento contable y prepara el reporte para el SRI simultáneamente — en segundos, sin intervención humana.",products:["🇪🇨 ERP IA EC","🌎 Aqyra"]},
-  innovacion:{icon:"💡",step:"Paso 6 de 6 · Metodología DCU",title:"Innovación — Mejora continua",desc:"El lanzamiento es solo el inicio. Analizamos datos de uso reales y feedback continuo para mejorar cada producto mensualmente. El ciclo DCU nunca termina — siempre volvemos a investigar.",example:"Datalyze IA nació de una innovación radical: lenguaje natural → consulta SQL → dashboard en menos de 3 segundos. Gerentes de PyMEs que nunca habían analizado datos ahora toman decisiones basadas en IA a diario.",products:["🌎 Datalyze IA","🌎 Plataforma Legal IA"]}
+  investigacion:{
+    icon:"🔍",
+    step:"Paso 1 de 6 · Metodología DCU — ASEVIA",
+    title:"Investigación — Lo que descubrimos en Ecuador",
+    desc:"Entrevistamos directamente a los 3 segmentos que servimos para entender sus dolores reales antes de diseñar cualquier producto.",
+    example:"👤 PERSONA NATURAL / RUC: El 68% no sabía exactamente cuándo vencía su declaración mensual. El 41% había pagado al menos una multa al SRI por olvido o error. Muchos usaban recordatorios en papel o WhatsApp.\n\n📊 CONTADOR / ASESOR: Contadores con 30-80 clientes RUC perdían hasta 6 días al mes solo en declaraciones manuales. El mayor miedo: cometer un error en un cliente que genere multa y perder la relación.\n\n🏢 PyME / EMPRESA: Los gerentes de PyMEs no tenían visibilidad de sus finanzas en tiempo real. Esperaban hasta el cierre mensual del contador para saber si ganaban o perdían dinero.",
+    products:["🇪🇨 DeclaraAI","🇪🇨 ERP IA EC","🌎 Datalyze IA"]
+  },
+  casos:{
+    icon:"📋",
+    step:"Paso 2 de 6 · Metodología DCU — ASEVIA",
+    title:"Casos de Uso — Flujos diseñados para cada segmento",
+    desc:"Definimos los flujos exactos de uso para cada tipo de usuario. Cada caso de uso tiene un objetivo claro, pasos mínimos y un resultado medible.",
+    example:"👤 PERSONA NATURAL: Caso #1 — Carlos tiene RUC de persona natural, factura servicios de consultoría. Flujo: ingresa a DeclaraAI → el agente importa sus facturas del SRI automáticamente → calcula IVA → llena F104 → envía. Total: 3 clics, 52 segundos.\n\n📊 CONTADOR: Caso #2 — Patricia tiene 47 clientes. Flujo: carga su lista de RUCs → DeclaraAI procesa todos en paralelo → alerta si alguno tiene inconsistencia → declara los aprobados en lote. Ahorra 5 días de trabajo mensual.\n\n🏢 PyME: Caso #3 — Empresa de alimentos necesita ver rentabilidad por producto. Flujo: conecta su ERP IA EC → Datalyze IA genera dashboard automático → gerente consulta en lenguaje natural: '¿cuál producto tiene mayor margen este mes?'",
+    products:["🇪🇨 DeclaraAI","🌎 Datalyze IA","🌎 Aqyra"]
+  },
+  disenio:{
+    icon:"🖥️",
+    step:"Paso 3 de 6 · Metodología DCU — ASEVIA",
+    title:"Diseño UI — Interfaz para cada perfil",
+    desc:"Cada perfil de usuario tiene una vista personalizada. El principio es uno: si requiere un manual, está mal diseñado. Máximo 3 clics para completar la tarea principal.",
+    example:"👤 PERSONA NATURAL: Dashboard simplificado — una sola pantalla con el estado de sus declaraciones, próximos vencimientos y botón grande 'Declarar ahora'. Sin terminología contable técnica.\n\n📊 CONTADOR: Vista multi-RUC — lista de todos sus clientes con semáforo de estado (verde/amarillo/rojo). Puede filtrar por fecha límite, ordenar por urgencia y aprobar declaraciones en lote con un clic.\n\n🏢 PyME: Panel ejecutivo — KPIs en tiempo real, gráficos de ventas vs gastos, alertas inteligentes. ERP IA EC fue prototipado 6 veces hasta que el CEO de una PyME pudo entender su situación financiera en menos de 30 segundos.",
+    products:["🇪🇨 DeclaraAI","🇪🇨 ERP IA EC","🌎 EduCore"]
+  },
+  validacion:{
+    icon:"✅",
+    step:"Paso 4 de 6 · Metodología DCU — ASEVIA",
+    title:"Validación — Probado con usuarios reales en Ecuador",
+    desc:"Cada producto fue validado con usuarios reales antes del lanzamiento. Medimos errores, tiempos y satisfacción. Solo lanzamos cuando el 80%+ completa la tarea sin ayuda.",
+    example:"👤 PERSONA NATURAL: 30 beta testers sin conocimiento contable. Resultado: el 93% completó su primera declaración solo, sin asistencia. Tiempo promedio: 52 segundos (vs 4+ horas manual). 0 declaraciones rechazadas por el SRI.\n\n📊 CONTADOR: 15 contadores con carteras de 20-80 RUCs. Resultado: reducción de 5.2 días/mes a 6 horas/mes en trabajo de declaraciones. NPS: 91 puntos. Feedback clave: 'No puedo imaginar volver a hacerlo manual.'\n\n🏢 PyME: 8 empresas de diferentes sectores validaron el ERP IA EC durante 2 meses. Resultado: visibilidad financiera en tiempo real por primera vez, reducción del 40% en tiempo de cierre contable mensual.",
+    products:["🇪🇨 DeclaraAI","🇪🇨 ERP IA EC","🌎 CRM IA Multi-ERP"]
+  },
+  desarrollo:{
+    icon:"⚙️",
+    step:"Paso 5 de 6 · Metodología DCU — ASEVIA",
+    title:"Desarrollo — Lo que construimos para ti",
+    desc:"Cada feature fue construido directamente desde los hallazgos de investigación y casos de uso. IA nativa desde el primer día — no añadida sobre software existente.",
+    example:"👤 PERSONA NATURAL → DeclaraAI: Agente que conecta con el portal SRI, importa facturas automáticamente, calcula IVA/IR, llena F104/F103/ATS y envía antes del vencimiento. Alertas 7, 3 y 1 día antes. Análisis de gastos desde estados de cuenta PDF.\n\n📊 CONTADOR → DeclaraAI Multi-RUC: Panel de gestión masiva, procesamiento en paralelo de múltiples clientes, detección de inconsistencias con IA, reportes automáticos por cliente, historial de declaraciones en la nube.\n\n🏢 PyME → ERP IA EC (Junio 2026): Módulos de contabilidad, inventarios, nómina y producción con IA central que procesa todo simultáneamente. Integración nativa con SRI para facturación electrónica. Dashboard ejecutivo con alertas predictivas.",
+    products:["🇪🇨 DeclaraAI","🇪🇨 ERP IA EC","🌎 Aqyra"]
+  },
+  innovacion:{
+    icon:"💡",
+    step:"Paso 6 de 6 · Metodología DCU — ASEVIA",
+    title:"Innovación — Lo que viene para cada segmento",
+    desc:"El ciclo no termina con el lanzamiento. Cada mejora nace de los datos de uso reales y el feedback de nuestros usuarios. El roadmap 2026 fue construido 100% desde solicitudes reales.",
+    example:"👤 PERSONA NATURAL: Próximo — análisis de tarjetas de crédito con IA, plan de pago optimizado automático, predicción de cuánto deberás pagar al SRI el próximo trimestre.\n\n📊 CONTADOR: Próximo — IA que redacta respuestas automáticas a notificaciones del SRI, scoring de riesgo tributario por cliente, integración con Datalyze IA para reportes financieros ejecutivos para cada cliente.\n\n🏢 PyME: Próximo — Datalyze IA (Julio 2026) para análisis en lenguaje natural, Aqyra (Agosto 2026) para gestión de compras con aprobaciones automáticas, CRM IA Multi-ERP (Septiembre 2026) para conectar ventas con contabilidad en tiempo real.",
+    products:["🌎 Datalyze IA","🌎 Aqyra","🌎 CRM IA Multi-ERP"]
+  }
 };
 document.querySelectorAll("[data-dcu]").forEach(function(n){
   n.addEventListener("click",function(){
